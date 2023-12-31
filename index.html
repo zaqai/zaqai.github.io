@@ -51,7 +51,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-12-31 09:18:42'
+  postUpdate: '2023-12-31 12:53:31'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -149,33 +149,113 @@
       }
       detectApple()
     })(window)</script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E7%9A%84%E6%98%BE%E7%A4%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BF%A1%E6%81%AF%E7%9A%84%E8%84%9A%E6%9C%AC/" title="Untitled">Untitled</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T09:10:32.051Z" title="Created 2023-12-31 09:10:32">2023-12-31</time></span></div><div class="content">一些有用的显示服务器信息的脚本
-ssh登录服务器的时候最先看到的便是一些欢迎的信息, 但默认的欢迎信息可以说是毫无用处, 我们便可以自行修改来展示一些有用的信息.
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E9%80%9A%E8%BF%87RSSHub%E8%AE%A2%E9%98%85%E5%AD%A6%E9%99%A2%E9%80%9A%E7%9F%A5/" title="通过RSSHub订阅学院通知">通过RSSHub订阅学院通知</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.330Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">通过RSSHub订阅学院通知
+今天看到以为up主在介绍RSSHub, 遂入坑, 上午在了解RSS, 并搭建了RSSHub, 下午费了九牛二虎之力终于给学院写了个RSS订阅(只怪自己js学的不够通透)
+【干货分享】三分钟教你部署RSSHub!_哔哩哔哩_bilibili
+
+大连理工大学软件学院(新) (dlut.edu.cn)RSS订阅地址: https://rss.zaqai.com/ssdut
+路由: 默认是本科生通知, 即https://rss.zaqai.com/ssdut和https://rss.zaqai.com/ssdut/bkstz等价, 对应于本科生通知-大连理工大学软件学院(新) (dlut.edu.cn)
+还有学院通知: https://rss.zaqai.com/ssdut/xytz, 对应于学院通知-大连理工大学软件学院(新) (dlut.edu.cn)
+其他的通知对我来说用处不大, 所以没有适配, 大体上差不多, 只需要更改一些jquery选择器的东西
+RSSHub介绍
+
+万物皆可RSS, 其实就是给你提供一个大体框架, 具体爬取哪些元素要你自己写
+原理就是当 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3/" title="跨域解决">跨域解决</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.323Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">关于跨域出于安全问题考虑, 浏览器都会有跨域限制, 但这个限制只在浏览器端, 你都不想浏览器在和你的服务器交互时还和别的服务器有联系吧. 
+试想这样一种场景, 服务器A通过一系列认证手段信任了你的浏览器, 你的浏览器也可以自由地和服务器A交换数据. 忽然你点击某个链接, 跳转到服务器B提供的网页中, 而该网页包含一段js代码, 是去服务器A中取数据的, 这种情况下就非常危险了, 如果没有跨域限制, 浏览器就会就会将服务器A发来的数据显示出来, 服务器B也可以轻松地从服务器A取得数据(这些数据本应通过认证才可以取得). 
+
+协议 域名 端口号有一个不同, 都是跨域, 注意二级域名不同也是跨域
+
+跨域请求分类
+简单跨域请求
+请求方法是GET、HEAD或者POST，并且当请求方法是POST时，Content-Type必须是application&#x2F;x-www-form-urlencoded, multipart&#x2F;form-data或着text&#x2F;plain中的一个值。
+请求中没有自定义HTTP头部(只有Accept、Content-Type、Accept-Langu ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E8%AE%B0%E4%B8%80%E4%B8%AAipv6+ddns/" title="记一个ipv6+ddns">记一个ipv6+ddns</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.322Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">记一个ipv6+ddns所谓ddns, 就是动态dns, 适用于服务器ip地址不固定, 过一段时间就会改变的场景
+推荐使用dynv6, 我用着挺好的, 地址: Free dynamic DNS for IPv6 (dynv6.com)
+虽然是英文, 但大致能看明白吧
+dynv6步骤
+首先新建域名, 在dynv6中查看token
+
+推荐使用他提供的脚本gist.github.com, 其他方式可自行参考他提供的APIdynv6 APIs
+12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#!/bin/sh -ehostname=$1device=$2file=$HOME/.dynv6.addr6[ -e $file ] &amp;&amp; old=`cat $file`if [ -z &quot;$hostname&quot; -o -z &quot;$token&quot; ]; then  echo &quot;Usage: token=&lt;your- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97/" title="编程心得">编程心得</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.320Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">正则匹配关键字符12String s = &quot;/data/cache/style_1_common.css?y7a&quot;;System.out.println(s.split(&quot;\\?&quot;)[0]);
+
+split(&quot;?&quot;) split(&quot;\?&quot;) split(&quot;/?&quot;)都不行split(&quot;\\?&quot;) split(&quot;[?]&quot;)行
+
+C++关于NULL和nullptr
+NULL在C语言被定义为#define NULL ((void *)0),可以发生隐式类型转换( int  *pi = NULL;)nullptr是在C++中引入的,代表空指针,因为C++是强类型语言,void*是不能隐式转换成其他类型的指针的,所以NULL会被解释为0
+
+12345678910111213141516#include &lt;iostream&gt;using namespace std; void func(int x) &#123;    cout&lt;&lt;&quo ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E7%89%9B%E5%AE%A2%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" title="牛客刷题笔记">牛客刷题笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.319Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">牛客刷题笔记
+抽象类 特点: 
+1.抽象类中可以有构造方法 
+2.抽象类中可以存在普通属性，方法，静态属性和方法。 
+3.抽象类中可以存在抽象方法。
+4.如果一个类中有一个抽象方法，那么当前类一定是抽象类；抽象类中不一定有抽象方法
+5.抽象类中的抽象方法，需要有子类实现，如果子类不实现，则子类也需要定义为抽象的。
 
 
-motdmotd, 全称Message Of The Day, 是Linux中发送问候消息的功能, 每次任意用户登录时都会触发motd服务的功能, 这个功能的脚本几乎都是使用root 权限来启动的
-脚本位置在/etc/update-motd.d, 不想执行某些脚本, 可以直接取消执行权限
+接口 
+1.在接口中只有方法的声明，没有方法体。 
+2.在接口中只有常量，因为定义的变量，在编译的时候都会默认加上 &#x3D;&#x3D;public static final&#x3D;&#x3D;  
+3.在接口中的方法，永远都被public来修饰。
+4.接口中没有构造方法，也不能实例化接口的对象。 
+5.接口可以实现多继承 
+6.接口中定义的方法都需要有实现类来实现，如果实现类不能实现接口中的所有方法 
+7.则实现类定义为抽象类。
+线程私有:java虚拟机栈，程序计数器，本地方法栈 
+线程共享:java堆，方法区
 
-10-hostname-color类似于logo banner之类的东西, 比如Spring Boot项目启动后就会显示Spring Boot的logo
-12#!/bin/bash/usr/bin/figlet &quot;$(hostname)&quot; | /usr/bin/lolcat -f
 
-10-uname12#!/bin/shuname -snrvm
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E6%96%90%E8%AE%AFn1%E5%AE%89%E8%A3%85centos7+docker%20openwrt/" title="斐讯n1安装centos7+docker openwrt">斐讯n1安装centos7+docker openwrt</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.311Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">斐讯n1安装centos7+docker openwrt
+首先声明,我的n1是降级过的,系统默认usb启动优先级大于emmc,所以可以直接将镜像写入u盘,通过u盘启动系统,同时通过脚本将系统写入emmc.
+同时,由于n1的usb是2.0,推荐将常用系统写入emmc,而不是通过u盘启动(虽然emmc只有8G).亲测速度快的不是一点半点,最直观的感受就是执行yum update.
 
-20-sysinfo123456789101112131415161718192021222324252627#!/bin/bash# get load averages ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/test/" title="test">test</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T09:09:02.000Z" title="Created 2023-12-31 09:09:02">2023-12-31</time></span></div><div class="content">this a testthis is body
+centos镜像N1盒子 CentOS7.9系统镜像，支持写入EMMC - 斐讯无线路由器以及其它斐迅网络设备 - 恩山无线论坛 - Powered by Discuz! (right.com.cn)
+同时附上论坛上的简单教程:
+分享N1盒子CentOS7.9系统下安装最新版本的宝塔面板linux7.7简单教程 - 斐讯无线路由器以及其它斐迅网络设备 - 恩山无线论坛 - Powered by Discuz! (right.com.cn)
+特别感谢恩山论坛的各位大佬!
 
-list test
+在此我也简单记录一下,以防某天重装系统:joy:
 
-</div></div></div><div class="recent-post-item"><div class="recent-post-info"><a class="article-title" href="/2023/12/31/hello-world/" title="Hello World">Hello World</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T08:47:44.045Z" title="Created 2023-12-31 08:47:44">2023-12-31</time></span></div><div class="content">Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new &quot;My New Post&quot;
+修改写入emmc的脚本,添加上复制lib64文件夹的命令
+123456vi /root/. ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E5%AE%B6%E7%94%A8%E7%94%B5%E5%99%A8%E5%8A%9F%E7%8E%87%E7%BB%9F%E8%AE%A1/" title="家用电器功率统计">家用电器功率统计</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.304Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">家用电器功率统计冰箱
+夜晚测量, 未打开过冰箱
 
-More info: Writing
-Run server1$ hexo server
 
-More info: Server
-Generate static files1$ hexo generate
 
-More info: Generating
-Deploy to remote sites1$ hexo deploy
+工作(85+80+78)&#x2F;3&#x3D;81min, 停止(67+69+71)&#x2F;3&#x3D;69min, 工作时间占比8&#x2F;15
+工作时平均功率50w
+一月大概消耗19度电
+冰柜
+白天测量, 大概打开冰柜一次
 
-More info: Deployment
-</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zaqai</div><div class="author-info__description">分享技术</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">3</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://haiyong.site/moyu/"><i class="iconfont icon-youxishoubing"></i><span>摸鱼</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><b><font color="#e66b6d">双</font> <font color="#e66d98">手</font> <font color="#e66cc6">合</font> <font color="#cc6de6">十</font> <font color="#9770e6">成</font> <font color="#6d93e6">为</font> <font color="#6fcde6">自</font> <font color="#72e6b6">己</font> <font color="#72e689">的</font> <font color="#99e670">神</font>, <font color="#cde670">自</font> <font color="#e6df72">己</font> <font color="#e6c073">所</font> <font color="#e6a271">信</font> <font color="#e6796f">念</font> <font color="#e65454">的</font> <font color="#e63333">即</font> <font color="#e62c2c">是</font> <font color="#e60101">信</font> <font color="#e60101">仰</font></b> <p align="center"><img src="https://haiyong.site/img/img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：zq2551856565</p> <p align="center">QQ号：2551856565</p></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E4%B8%80%E4%BA%9B%E6%9C%89%E7%94%A8%E7%9A%84%E6%98%BE%E7%A4%BA%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%BF%A1%E6%81%AF%E7%9A%84%E8%84%9A%E6%9C%AC/" title="Untitled">Untitled</a><time datetime="2023-12-31T09:10:32.051Z" title="Created 2023-12-31 09:10:32">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/test/" title="test">test</a><time datetime="2023-12-31T09:09:02.000Z" title="Created 2023-12-31 09:09:02">2023-12-31</time></div></div><div class="aside-list-item"><div class="content"><a class="title" href="/2023/12/31/hello-world/" title="Hello World">Hello World</a><time datetime="2023-12-31T08:47:44.045Z" title="Created 2023-12-31 08:47:44">2023-12-31</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">3</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">3</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-12-31T09:18:42.265Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By zaqai</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+
+
+工作(14+14+25+17)&#x2F;4&#x3D;17.5min, 停止(24+23+18+21)&#x2F;4&#x3D;21.5min, 工作时间占比0.45
+工作时平均功率80w
+一月大概消耗26度电
+米家摄像头
+2w!
+电风扇
+不摇头
+
+
+2档功率48w, 1档功率46w, 差别不大啊
+路由器
+中间看了一段视频
+
+
+
+权当6.5w吧
+光猫
+
+2w吧
+外面摄像头
+大概是夜晚开启夜视功能, 功率变高了, 算作4w吧
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E5%A5%BD%E7%94%A8%E7%9A%84docker%E9%95%9C%E5%83%8F/" title="好用的docker镜像">好用的docker镜像</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.302Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">好用的docker镜像portainer12docker pull portainer/portainerdocker run -d --name portainer -p 39000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /root/data/docker_data/portainer/data:/data -v /root/data/docker_data/portainer/public:/public portainer/portainer
+
+汉化123cd /root/data/docker_data/portainerwget https://alist.zaqai.com/d/ali/share/portainer汉化/public.zipunzip ./public.zip
+
+
+
+alist1docker run -d --restart=always -v /etc/alist:/opt/alist/data -v /xa:/xa -p 39244:5244 --name=&quot;alist&qu ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E5%8D%81%E7%A7%8D%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0WordCount(scala)/" title="十种方式实现WordCount(scala)">十种方式实现WordCount(scala)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.301Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">十种方式实现WordCount(scala)
+本质上都是各种RDD算子的灵活使用
+
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167package com.zq.scala.testimport org.apache.spark.util.&#123;Accum ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0-%E9%93%BE%E8%A1%A8/" title="刷题笔记-链表">刷题笔记-链表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.300Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">刷题笔记-链表完整链表操作模板123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151#include &lt;algorithm&gt;#include &lt;iostream&gt;#include &lt;vector&gt;using namespace std;class MyLinkedList &#123;   public:    struct  ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zaqai</div><div class="author-info__description">分享技术</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://haiyong.site/moyu/"><i class="iconfont icon-youxishoubing"></i><span>摸鱼</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><b><font color="#e66b6d">双</font> <font color="#e66d98">手</font> <font color="#e66cc6">合</font> <font color="#cc6de6">十</font> <font color="#9770e6">成</font> <font color="#6d93e6">为</font> <font color="#6fcde6">自</font> <font color="#72e6b6">己</font> <font color="#72e689">的</font> <font color="#99e670">神</font>, <font color="#cde670">自</font> <font color="#e6df72">己</font> <font color="#e6c073">所</font> <font color="#e6a271">信</font> <font color="#e6796f">念</font> <font color="#e65454">的</font> <font color="#e63333">即</font> <font color="#e62c2c">是</font> <font color="#e60101">信</font> <font color="#e60101">仰</font></b> <p align="center"><img src="https://haiyong.site/img/img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：zq2551856565</p> <p align="center">QQ号：2551856565</p></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E9%80%9A%E8%BF%87RSSHub%E8%AE%A2%E9%98%85%E5%AD%A6%E9%99%A2%E9%80%9A%E7%9F%A5/" title="通过RSSHub订阅学院通知">通过RSSHub订阅学院通知</a><time datetime="2023-12-31T20:18:03.330Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3/" title="跨域解决">跨域解决</a><time datetime="2023-12-31T20:18:03.323Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E8%AE%B0%E4%B8%80%E4%B8%AAipv6+ddns/" title="记一个ipv6+ddns">记一个ipv6+ddns</a><time datetime="2023-12-31T20:18:03.322Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97/" title="编程心得">编程心得</a><time datetime="2023-12-31T20:18:03.320Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E7%89%9B%E5%AE%A2%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" title="牛客刷题笔记">牛客刷题笔记</a><time datetime="2023-12-31T20:18:03.319Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">55</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">55</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-12-31T12:53:31.100Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By zaqai</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
