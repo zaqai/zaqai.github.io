@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>linux常用工具 | Hexo</title><meta name="author" content="zaqai"><meta name="copyright" content="zaqai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="screen安装1234# CentOSyum install screen# Debian&#x2F;Ubuntuapt install screen 创建12345# 创建一个叫Hello的虚拟终端screen -S Helloscreen -R Hello#使用-R创建，如果之前有创建唯一一个同名的screen，则直接进入之前创建的screen#使用-S创建和直接输入screen创建的虚拟终端，不会检">
+<meta property="og:type" content="article">
+<meta property="og:title" content="linux常用工具">
+<meta property="og:url" content="https://blog.zaqai.com/2024/01/01/linux%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="screen安装1234# CentOSyum install screen# Debian&#x2F;Ubuntuapt install screen 创建12345# 创建一个叫Hello的虚拟终端screen -S Helloscreen -R Hello#使用-R创建，如果之前有创建唯一一个同名的screen，则直接进入之前创建的screen#使用-S创建和直接输入screen创建的虚拟终端，不会检">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-12-31T20:18:03.210Z">
+<meta property="article:modified_time" content="2023-12-31T12:19:46.777Z">
+<meta property="article:author" content="zaqai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.zaqai.com/2024/01/01/linux%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'linux常用工具',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-31 20:19:46'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">71</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">linux常用工具</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-31T20:18:03.210Z" title="Created 2024-01-01 04:18:03">2024-01-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-31T12:19:46.777Z" title="Updated 2023-12-31 20:19:46">2023-12-31</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="linux常用工具"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="screen"><a href="#screen" class="headerlink" title="screen"></a>screen</h1><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"># CentOS</span><br><span class="line">yum install screen</span><br><span class="line"># Debian/Ubuntu</span><br><span class="line">apt install screen</span><br></pre></td></tr></table></figure>
+<h2 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 创建一个叫Hello的虚拟终端</span><br><span class="line">screen -S Hello</span><br><span class="line">screen -R Hello</span><br><span class="line">#使用-R创建，如果之前有创建唯一一个同名的screen，则直接进入之前创建的screen</span><br><span class="line">#使用-S创建和直接输入screen创建的虚拟终端，不会检录之前创建的screen（也就是会创建同名的screen)</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Ctril+a，再按d ,回到主界面,screen后台运行,处于Detached</p>
+</blockquote>
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">screen -ls # 查看已开的screen</span><br><span class="line">screen -r|R [pid/name] # 进入screen,pid/name：为虚拟终端PID或Name</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="kill掉screen"><a href="#kill掉screen" class="headerlink" title="kill掉screen"></a>kill掉screen</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">screen -S &#123;session_name&#125; -X quit # kill</span><br><span class="line">进入终端,输入exit,退出</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>两者本质一样,第一个在主终端指定screen并执行exit命令,第二个直接进入screen执行exit命令</p>
+</blockquote>
+<h1 id="ss-Socket-Statistics"><a href="#ss-Socket-Statistics" class="headerlink" title="ss(Socket Statistics )"></a>ss(Socket Statistics )</h1><blockquote>
+<p>ss 命令可以用来获取 socket 统计信息，它显示的内容和 netstat 类似。但 ss 的优势在于它能够显示更多更详细的有关 TCP 和连接状态的信息，而且比 netstat 更快。当服务器的 socket 连接数量变得非常大时，无论是使用 netstat 命令还是直接 cat &#x2F;proc&#x2F;net&#x2F;tcp，执行速度都会很慢。ss 命令利用到了 TCP 协议栈中 tcp_diag。tcp_diag 是一个用于分析统计的模块，可以获得 Linux 内核中第一手的信息，因此 ss 命令的性能会好很多。</p>
+</blockquote>
+<h2 id="常用选项"><a href="#常用选项" class="headerlink" title="常用选项"></a>常用选项</h2><blockquote>
+<p>-h, –help 帮助<br> -V, –version 显示版本号<br> -t, –tcp 显示 TCP 协议的 sockets<br> -u, –udp 显示 UDP 协议的 sockets<br> -x, –unix 显示 unix domain sockets，与 -f 选项相同<br> -n, –numeric 不解析服务的名称，如 “22” 端口不会显示成 “ssh”<br> -l, –listening 只显示处于监听状态的端口<br> -p, –processes 显示监听端口的进程(Ubuntu 上需要 sudo)<br> -a, –all 对 TCP 协议来说，既包含监听的端口，也包含建立的连接<br> -r, –resolve 把 IP 解释为域名，把端口号解释为协议名称</p>
+</blockquote>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ss -tlp</span><br></pre></td></tr></table></figure>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1721800">https://cloud.tencent.com/developer/article/1721800</a></p>
+<h1 id="ag-递归搜索文件内容"><a href="#ag-递归搜索文件内容" class="headerlink" title="ag(递归搜索文件内容)"></a>ag(递归搜索文件内容)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install silversearcher-ag</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">ag类似grep 和 find，但是执行效率比后两者高。</span><br><span class="line"></span><br><span class="line">ag -g &lt;File Name&gt; 类似于 find . -name &lt;File Name&gt;</span><br><span class="line"></span><br><span class="line">ag -i PATTERN： 忽略大小写搜索含PATTERN文本</span><br><span class="line"></span><br><span class="line">ag -A PATTERN：搜索含PATTERN文本，并显示匹配内容之后的n行文本，例如：ag -A 5  abc会显示搜索到的包含abc的行以及它之后5行的文本信息。</span><br><span class="line"></span><br><span class="line">ag -B PATTERN：搜索含PATTERN文本，并显示匹配内容之前的n行文本</span><br><span class="line"></span><br><span class="line">ag -C PATTERN：搜索含PATTERN文本，并同时显示匹配内容以及它前后各n行文本的内容。</span><br><span class="line"></span><br><span class="line">ag --ignore-dir &lt;Dir Name&gt;：忽略某些文件目录进行搜索。</span><br><span class="line"></span><br><span class="line">ag -w PATTERN： 全匹配搜索，只搜索与所搜内容完全匹配的文本。</span><br><span class="line"></span><br><span class="line">ag --java PATTERN： 在java文件中搜索含PATTERN的文本。</span><br><span class="line"></span><br><span class="line">ag --xml PATTERN：在XML文件中搜索含PATTERN的文本。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h1 id="jq-处理json"><a href="#jq-处理json" class="headerlink" title="jq(处理json)"></a>jq(处理json)</h1><h2 id="安装-1"><a href="#安装-1" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># Debian系，如 Ubuntu</span><br><span class="line">sudo apt-get install jq</span><br><span class="line"></span><br><span class="line"># RedHat系, 如 CentOS</span><br><span class="line">yum install jq</span><br></pre></td></tr></table></figure>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">cat json.txt | jq &#x27;.&#x27; #美化输出</span><br><span class="line">cat json.txt | jq &#x27;.[0]&#x27; #输出列表中的第一个元素，可以使用[index]：</span><br><span class="line">cat json.txt | jq &#x27;.[0] | &#123;name:.name,city:.address.city&#125;&#x27;</span><br><span class="line"># 取出第0个,.name取出第0个name的值</span><br><span class="line">cat json.txt | jq &quot;[.[] | &#123;name:.arrayBrowser[1].name,city:.address.city&#125;]&quot;</span><br><span class="line"># 如果希望把jq的输出当作一个数组，可以在前后加上[]：</span><br></pre></td></tr></table></figure>
+<ul>
+<li>取出数组中的键</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ echo &#x27;&#123;&quot;abc&quot;: 1, &quot;abcd&quot;: 2, &quot;Foo&quot;: 3&#125;&#x27; | jq &#x27;keys&#x27;                                        </span><br><span class="line">[</span><br><span class="line">  &quot;Foo&quot;,</span><br><span class="line">  &quot;abc&quot;,</span><br><span class="line">  &quot;abcd&quot;</span><br><span class="line">]</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>使用多个过滤器</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ echo &#x27;&#123; &quot;foo&quot;: 42, &quot;bar&quot;: &quot;something else&quot;, &quot;baz&quot;: true&#125;&#x27; | jq &#x27;.foo, .bar&#x27; </span><br><span class="line">42</span><br><span class="line">&quot;something else&quot;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>通过管道将一个过滤器的输出当做下一个过滤器的输入</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ echo &#x27;[&#123;&quot;name&quot;:&quot;JSON&quot;, &quot;good&quot;:true&#125;, &#123;&quot;name&quot;:&quot;XML&quot;, &quot;good&quot;:false&#125;]&#x27; | jq &#x27;.[] | .name&#x27;                                                 </span><br><span class="line">&quot;JSON&quot;</span><br><span class="line">&quot;XML&quot;</span><br></pre></td></tr></table></figure>
+
+<h1 id="shellcheck-shell脚本静态检查工具，能够识别语法错误以及不规范的写法。"><a href="#shellcheck-shell脚本静态检查工具，能够识别语法错误以及不规范的写法。" class="headerlink" title="shellcheck(shell脚本静态检查工具，能够识别语法错误以及不规范的写法。)"></a>shellcheck(shell脚本静态检查工具，能够识别语法错误以及不规范的写法。)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ apt-get install shellcheck</span><br><span class="line">centos下：</span><br><span class="line"></span><br><span class="line">$ yum -y install epel-release</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">shellcheck myscript.sh</span><br></pre></td></tr></table></figure>
+
+<h1 id="fzf-命令行下模糊搜索工具"><a href="#fzf-命令行下模糊搜索工具" class="headerlink" title="fzf(命令行下模糊搜索工具)"></a>fzf(命令行下模糊搜索工具)</h1><h2 id="安装-2"><a href="#安装-2" class="headerlink" title="安装"></a>安装</h2><blockquote>
+<p>搭配zsh使用</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sh -c &quot;$(wget https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh -O -)&quot;</span><br><span class="line">git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf</span><br><span class="line">~/.fzf/install</span><br><span class="line">source ~/.zshrc</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="使用-1"><a href="#使用-1" class="headerlink" title="使用"></a>使用</h2><ul>
+<li>ctrl-r  模糊匹配历史命令</li>
+<li>CTRL-T 查找目录下条目</li>
+</ul>
+<blockquote>
+<p>在输出交换窗口里<br>Ctrl-J&#x2F;Ctrl-K&#x2F;Ctrl-N&#x2F;Ctrlk-N可以用来将光标上下移动<br>Enter键用来选中条目， Ctrl-C&#x2F;Ctrl-G&#x2F;Esc用来退出<br>在多选模式下（-m), TAB和Shift-TAB用来多选<br>Mouse: 上下滚动， 选中， 双击； Shift-click或shift-scoll用于多选模式</p>
+</blockquote>
+<ul>
+<li><code>fzf --preview &#39;cat &#123;&#125;&#39; # 动态预览文本</code></li>
+</ul>
+<h1 id="axel-多线程下载工具，下载文件时可以替代curl、wget"><a href="#axel-多线程下载工具，下载文件时可以替代curl、wget" class="headerlink" title="axel(多线程下载工具，下载文件时可以替代curl、wget)"></a>axel(多线程下载工具，下载文件时可以替代curl、wget)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install axel</span><br></pre></td></tr></table></figure>
+<ul>
+<li>下载单个文件</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axel link</span><br></pre></td></tr></table></figure>
+<ul>
+<li>用不同的名称保存文件</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axel -o filename link</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>恢复未完成的下载(执行相同命令会自动继续下载)</p>
+</li>
+<li><p>不显示文件下载进度</p>
+</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">axel -q link</span><br></pre></td></tr></table></figure>
+
+<h1 id="tmux-终端复用工具，替代screen、nohup。"><a href="#tmux-终端复用工具，替代screen、nohup。" class="headerlink" title="tmux(终端复用工具，替代screen、nohup。)"></a>tmux(终端复用工具，替代screen、nohup。)</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">apt-get install tmux</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建会话</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tmux new -s roclinux </span><br><span class="line"><span class="comment">#会话起名叫作 roclinux</span></span><br><span class="line"></span><br><span class="line">tmux</span><br><span class="line">默认起名0</span><br></pre></td></tr></table></figure>
+<ul>
+<li>在会话中创建子会话</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">第一步：按 Ctrl+B 组合键，然后松开。</span><br><span class="line">第二步：再单独按一下 c 键。</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<ul>
+<li>窗口间切换</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">第一步：按 Ctrl-B 组合键，然后松开。</span><br><span class="line">第二步：按数字 0 键。</span><br><span class="line"></span><br><span class="line">或</span><br><span class="line">在会话中</span><br><span class="line"><span class="comment"># 使用会话编号</span></span><br><span class="line">$ tmux switch -t 0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用会话名称</span></span><br><span class="line">$ tmux switch -t &lt;session-name&gt;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>kill 会话</li>
+</ul>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">会话中 <span class="built_in">exit</span> 或 ctrl+d</span><br><span class="line"></span><br><span class="line">或</span><br><span class="line"></span><br><span class="line">主机中</span><br><span class="line"><span class="comment"># 使用会话编号</span></span><br><span class="line">$ tmux kill-session -t 0</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用会话名称</span></span><br><span class="line">$ tmux kill-session -t &lt;name&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<ul>
+<li>会话后台运行</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">第一步：输入组合键 Ctrl+B，然后松开。</span><br><span class="line">第二步：输入字母 d。</span><br><span class="line"></span><br><span class="line">或</span><br><span class="line">tmux detach</span><br></pre></td></tr></table></figure>
+<ul>
+<li>主机查看会话</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux ls</span><br></pre></td></tr></table></figure>
+<ul>
+<li>主机进入会话</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tmux a -t roclinux</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br></pre></td><td class="code"><pre><span class="line"># 开启新session</span><br><span class="line">tmux</span><br><span class="line"># 开启新session并命名</span><br><span class="line">tmux new -s my_session</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 显示所有session</span><br><span class="line">tmux ls</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 使用session编号接入</span><br><span class="line">tmux attach -t 0</span><br><span class="line"># 使用session名称接入</span><br><span class="line">tmux attach -t &lt;session-name&gt;</span><br><span class="line">tmux a -t name #简写</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 使用session编号kill</span><br><span class="line">tmux kill-session -t 0</span><br><span class="line"># 使用session名称kill</span><br><span class="line">tmux kill-session -t &lt;session-name&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 使用session编号切换</span><br><span class="line">tmux switch -t 0</span><br><span class="line"># 使用session名称切换</span><br><span class="line">tmux switch -t &lt;session-name&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 重命名会话</span><br><span class="line">tmux rename-session -t 0 &lt;new-name&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"># 选择需要跳转的session会话</span><br><span class="line">C + b s</span><br><span class="line"></span><br><span class="line"># 重命名当前会话</span><br><span class="line">C + b $</span><br><span class="line"></span><br><span class="line"># 断开当前session</span><br><span class="line">C + b d</span><br><span class="line"></span><br><span class="line"># 在当前session中多加一个window</span><br><span class="line">C + b c</span><br><span class="line"></span><br><span class="line"># 在一个session中的多个window中作出选择</span><br><span class="line">C + b w</span><br><span class="line"></span><br><span class="line"># 关闭当前session中的当前window</span><br><span class="line">C + b x</span><br><span class="line"></span><br><span class="line"># 进入tmux翻屏模式, 实现上下翻页</span><br><span class="line">C + b [  </span><br><span class="line">### 进入翻屏模式后PgUp PgDn 实现上下翻页（mac可以用fn + ↑ ↓实现上下翻页）</span><br><span class="line">### q 退出翻屏模式</span><br><span class="line"></span><br><span class="line">#############</span><br><span class="line"># 其他常用快捷键</span><br><span class="line">##############</span><br><span class="line"></span><br><span class="line">C + b ！  #关闭一个session中所有窗口</span><br><span class="line">C + b % #将当前窗口分成左右两分</span><br><span class="line">C + b &quot; #将当前窗口分成上下两分</span><br><span class="line">C + b 方向键 #让光标在不同的窗口中跳转 </span><br><span class="line">C + b 方向键 #按住C+b不放，同时按住方向键，可以调节光标所在窗口的大小 </span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://blog.zaqai.com">zaqai</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://blog.zaqai.com/2024/01/01/linux%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/">https://blog.zaqai.com/2024/01/01/linux%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/01/01/Maven%E7%AC%94%E8%AE%B0/" title="Maven笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">Maven笔记</div></div></a></div><div class="next-post pull-right"><a href="/2024/01/01/linux%E5%AE%89%E8%A3%85texlive%E5%B9%B6%E4%BD%BF%E7%94%A8vscode%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" title="linux安装texlive并使用vscode远程连接"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">linux安装texlive并使用vscode远程连接</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zaqai</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">71</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://blog.zaqai.com"><i class="iconfont icon-youxishoubing"></i><span>主页</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><p align="center"><img src="https://haiyong.site/img/img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：zq2551856565</p> <p align="center">QQ号：2551856565</p></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#screen"><span class="toc-number">1.</span> <span class="toc-text">screen</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85"><span class="toc-number">1.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA"><span class="toc-number">1.2.</span> <span class="toc-text">创建</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%93%8D%E4%BD%9C"><span class="toc-number">1.3.</span> <span class="toc-text">操作</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#kill%E6%8E%89screen"><span class="toc-number">1.4.</span> <span class="toc-text">kill掉screen</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ss-Socket-Statistics"><span class="toc-number">2.</span> <span class="toc-text">ss(Socket Statistics )</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B8%B8%E7%94%A8%E9%80%89%E9%A1%B9"><span class="toc-number">2.1.</span> <span class="toc-text">常用选项</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BE%8B%E5%AD%90"><span class="toc-number">2.2.</span> <span class="toc-text">例子</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">2.3.</span> <span class="toc-text">参考</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#ag-%E9%80%92%E5%BD%92%E6%90%9C%E7%B4%A2%E6%96%87%E4%BB%B6%E5%86%85%E5%AE%B9"><span class="toc-number">3.</span> <span class="toc-text">ag(递归搜索文件内容)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#jq-%E5%A4%84%E7%90%86json"><span class="toc-number">4.</span> <span class="toc-text">jq(处理json)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-1"><span class="toc-number">4.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8"><span class="toc-number">4.2.</span> <span class="toc-text">使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#shellcheck-shell%E8%84%9A%E6%9C%AC%E9%9D%99%E6%80%81%E6%A3%80%E6%9F%A5%E5%B7%A5%E5%85%B7%EF%BC%8C%E8%83%BD%E5%A4%9F%E8%AF%86%E5%88%AB%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF%E4%BB%A5%E5%8F%8A%E4%B8%8D%E8%A7%84%E8%8C%83%E7%9A%84%E5%86%99%E6%B3%95%E3%80%82"><span class="toc-number">5.</span> <span class="toc-text">shellcheck(shell脚本静态检查工具，能够识别语法错误以及不规范的写法。)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#fzf-%E5%91%BD%E4%BB%A4%E8%A1%8C%E4%B8%8B%E6%A8%A1%E7%B3%8A%E6%90%9C%E7%B4%A2%E5%B7%A5%E5%85%B7"><span class="toc-number">6.</span> <span class="toc-text">fzf(命令行下模糊搜索工具)</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-2"><span class="toc-number">6.1.</span> <span class="toc-text">安装</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BD%BF%E7%94%A8-1"><span class="toc-number">6.2.</span> <span class="toc-text">使用</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#axel-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E4%B8%8B%E8%BD%BD%E5%B7%A5%E5%85%B7%EF%BC%8C%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6%E6%97%B6%E5%8F%AF%E4%BB%A5%E6%9B%BF%E4%BB%A3curl%E3%80%81wget"><span class="toc-number">7.</span> <span class="toc-text">axel(多线程下载工具，下载文件时可以替代curl、wget)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tmux-%E7%BB%88%E7%AB%AF%E5%A4%8D%E7%94%A8%E5%B7%A5%E5%85%B7%EF%BC%8C%E6%9B%BF%E4%BB%A3screen%E3%80%81nohup%E3%80%82"><span class="toc-number">8.</span> <span class="toc-text">tmux(终端复用工具，替代screen、nohup。)</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/github%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93clone%20push%20pull/" title="github 私有仓库clone push pull">github 私有仓库clone push pull</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/CLIP-EBC_CLIP%20Can%20Count%20Accurately%20through%20Enhanced%20Blockwise%20Classification/" title="论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification">论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/Diffuse-Denoise-Count%EF%BC%9AAccurate%20Crowd-Counting%20with%20Diffusion%20Models/" title="论文阅读 Diffuse-Denoise-Count：Accurate Crowd-Counting with Diffusion Models">论文阅读 Diffuse-Denoise-Count：Accurate Crowd-Counting with Diffusion Models</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/Focus%20for%20Free%20in%20Density-Based%20Counting/" title="论文阅读 Focus for Free in Density-Based Counting">论文阅读 Focus for Free in Density-Based Counting</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/Point,%20Segment%20and%20Count_%20A%20Generalized%20Framework%20for%20Object%20Counting/" title="论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting">论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zaqai</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div></body></html>

@@ -51,7 +51,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2024-06-10 11:43:54'
+  postUpdate: '2024-06-10 19:58:28'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -149,11 +149,102 @@
       }
       detectApple()
     })(window)</script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">66</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/28/nps%E6%B3%9B%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="nps泛域名解析内网穿透">nps泛域名解析内网穿透</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-28T10:18:03.219Z" title="Created 2024-03-28 10:18:03">2024-03-28</time></span></div><div class="content">nps泛域名解析内网穿透
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">71</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/10/github%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93clone%20push%20pull/" title="github 私有仓库clone push pull">github 私有仓库clone push pull</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></span></div><div class="content">github 私有仓库clone push pull
+
+有些情况下, 我们的代码还不能公开到github, 但是使用github管理代码版本真的很方便, 所以便有了这个需求
+
+ssh(推荐)
+适用于你自己的服务器, 你可以将服务器的公钥放在github, 然后clone时使用git@的形式, 注意不是https, 之后的push pull都正常了.
+但是, 由于网络原因, 大家都懂, 很恶心.
+可以配置个代理
+vim ~/.ssh/config
+123Host github.com    User git    ProxyCommand nc -v -x ip:port %h %p
+就可以畅通无阻了.
+token
+适用于服务器不是你的而你还需要用这台服务器, 使用token保密性高一点. 毕竟将服务器的公钥放在github就是完全信任这个服务器了.
+在你自己的github seetings里, 有一个token, https://github.com/settings/tokens?type=beta
+这两个token我忘记用的是哪个了, 好像是都可以
+设置token的访问权限, 对你 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/10/CLIP-EBC_CLIP%20Can%20Count%20Accurately%20through%20Enhanced%20Blockwise%20Classification/" title="论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification">论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></span></div><div class="content">
+https://github.com/Yiming-M/CLIP-EBC
+2024.3 arxiv
+55.0 and 6.3 on ShanghaiTech part A and part B
+基于分类的计数方法，提出了Enhanced Blockwise Classification框架，现有的基于回归的方法可以无缝地集成到EBC框架中
+EBC在discretization, label correction, and loss function三个方面提高基于分类的计数方法的性能
+基于EBC，提出CLIP-EBC，完全使用CLIP来生成人群密度图
+
+
+基于回归的计数方法通常是编码器解码器架构，回归密度图
+基于分类的计数方法，将[0,♾️]的整数分为不重叠的间隔，目标就是将预测的数值分类到正确的间隔。可以增加大数值的样本数量，解决计数值的长尾分布问题
+
+方法
+Enhanced Blockwise Classification(EBC)
+基于回归生成密度图的方法面临大计数值的样本不足的问题
+EBC将计数值分组到bin中，以增加每个bin的样本量，从而缓解了样本不平衡的问题。
+
+  是 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/10/Diffuse-Denoise-Count%EF%BC%9AAccurate%20Crowd-Counting%20with%20Diffusion%20Models/" title="论文阅读 Diffuse-Denoise-Count：Accurate Crowd-Counting with Diffusion Models">论文阅读 Diffuse-Denoise-Count：Accurate Crowd-Counting with Diffusion Models</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></span></div><div class="content">
+又名CrowdDiff: Multi-hypothesis Crowd Density Estimation using Diffusion Models
+CVPR’24
+第一个使用diffusion做人群计数和生成密度图
+使用高斯核生成密度图，存在背景噪声积累和密度损失的问题。
+小核可以避免临近密度的干扰。这有助于保持密度像素值的边界和分布，但回归网络使用小核来生成GT是无效的。ineffective
+
+本文提出使用条件扩散模型来预测密度图，因为扩散模型在生成过程中对训练数据具有高保真度。
+提出了CrowdDiff，使用反向扩散过程生成人群密度图。
+此外，由于扩散过程的中间时间步长是有噪声的，我们在训练过程中加入一个回归分支来进行直接人群估计，以改进特征学习。
+由于扩散模型的随机性，引入了生成多重密度图并融合来提高计数性能。
+为了避免密度损失，通过阈值像素密度值来计算预测密度图中观察到的数量，消除了背景噪声的影响，因为不需要密度像素值相加。
+CrowdDiff
+预测条件人群图像的每个时间步长中xt的噪声量，并应用反向扩散过程最终得到x0
+
+3.1 小核
+扩散过程需要一个密度图来学习 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/10/Focus%20for%20Free%20in%20Density-Based%20Counting/" title="论文阅读 Focus for Free in Density-Based Counting">论文阅读 Focus for Free in Density-Based Counting</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></span></div><div class="content">
+Zenglin Shi1 · Pascal Mettes2 · Cees G. M. Snoek2
+IJCV  Received: 8 June 2023 / Accepted: 1 January 2024
+
+
+大部分方法只使用点标注生成GT密度图，文章提出点标注还有其他用途来帮助计数，并且可以和任意网络结构和损失函数兼容。
+- 模拟遮挡，相当于数据增强
+- 前景蒸馏，从点标注生成前景掩模，网络可以不受背景干扰，只提取前景知识
+- focus-for-free，会议版本的文章，将监督聚焦于分割和全局密度分类
+
+通常的做法：通过点标注获得GT密度图，训练网络将输入图片映射到密度图，推理时将网络输出的密度图求和得到数量。基于此，提出三种方法利用点标注提高计数准确率。
+模拟遮挡
+
+现有的计数方法对于遮挡和密集场景效果不好，也缺少足够的密集场景的数据来训练
+
+图片中的物体=
+使用来遮挡
+
+
+
+融合边缘
+
+将一个物体粘贴到其他地方，物体边缘变化大，不利于训练
+
+确定遮挡强度
+
+根据原图片遮挡等级确定模拟遮挡的强度
+
+定义了一种方法计算遮挡等级
+效果
+Cutout和CutMix是遮挡增强的方法 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/06/10/Point,%20Segment%20and%20Count_%20A%20Generalized%20Framework%20for%20Object%20Counting/" title="论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting">论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></span></div><div class="content">
+CVPR 2024
+https://github.com/Hzzone/PseCo
+
+提出了基于检测的零样本和小样本类别无关的通用计数框架（检测=计数+定位）
+使用了SAM将所有可能的物体分割成掩码proposal，使用CLIP对proposal分类来计数
+直接使用SAM面临效率低和小的稠密物体无法识别的问题
+首先提出了一个类别无关的物体定位器，为SAM提供准确而且最少的点提示，降低计算成本，而且避免了小对象的丢失。
+此外，提出了一种广义的对象分类器，利用CLIP图像/文本嵌入作为分类器，通过层次知识蒸馏，以获得层次掩模proposal之间的区别
+
+point decoder
+对于SAM而言，在一张图片上均匀生成点（网格形式）作为prompts，如果点所在的位置有物体，SAM就可以生成该物体的mask，但是网格形式生成点，点不能保证落到所有物体上，特别是小物体。虽然可以让点更稠密，生成更多的点，但是效率不高
+所以要训练一个网络来生成点，让点尽可能多的落到物体上，而不是背景上，从而提高效率。
+本文将这个问题看作关键点预测问题，提出了point decoder，和SAM的mask dec ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/28/nps%E6%B3%9B%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="nps泛域名解析内网穿透">nps泛域名解析内网穿透</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-28T10:18:03.219Z" title="Created 2024-03-28 18:18:03">2024-03-28</time></span></div><div class="content">nps泛域名解析内网穿透
 有一个自己的服务器可以实现很多事情, 给自己带来便利.但是首先要考虑网络问题, 毕竟自己也不可能一直都处于内网环境中.一个解决方案便是云服务器, 带有公网ip, 但是配置稍微好一点的云服务器价格水涨船高.我的解决方案是家里放置一个常年开机的linux主机, 使用配置低的云服务器做内网穿透.搭配泛域名解析, 最终的效果就是在主机上配置一个反向代理之后, 直接可以使用https+二级域名的方式在任意网络环境(能连公网)下访问网站, 对自己来说操作完全透明, 就好像家里的主机有了公网ip一样.
 
 准备域名的”*“记录解析到云服务器的公网ip上.
-云服务器nps按照网上的搭建步骤来, 直接运行二进制文件也行, docker也行docker run -d --name nps --net=host -v /root/docker/nps/conf:/conf ffdfgdfg/nps注意要修改配置文件’conf/nps.conf’12http_proxy_port=80https_proxy_port=443https_proxy_port必须为443, 因为要实现ht ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/10/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%89%A9%E4%BD%93%E8%AE%A1%E6%95%B0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%20Point,%20Segment%20and%20Count_%20A%20Generalized%20Framework%20for%20Object%20Counting/" title="多模态物体计数论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting">多模态物体计数论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-10T20:18:03.287Z" title="Created 2024-03-10 20:18:03">2024-03-10</time></span></div><div class="content">Point, Segment and Count_ A Generalized Framework for Object Counting
+云服务器nps按照网上的搭建步骤来, 直接运行二进制文件也行, docker也行docker run -d --name nps --net=host -v /root/docker/nps/conf:/conf ffdfgdfg/nps注意要修改配置文件’conf/nps.conf’12http_proxy_port=80https_proxy_port=443https_proxy_port必须为443, 因为要实现ht ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/11/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%89%A9%E4%BD%93%E8%AE%A1%E6%95%B0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%20Point,%20Segment%20and%20Count_%20A%20Generalized%20Framework%20for%20Object%20Counting/" title="多模态物体计数论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting">多模态物体计数论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-10T20:18:03.287Z" title="Created 2024-03-11 04:18:03">2024-03-11</time></span></div><div class="content">Point, Segment and Count_ A Generalized Framework for Object Counting
 
 CVPR 2024
 https://github.com/Hzzone/PseCo
@@ -166,7 +257,7 @@ https://github.com/Hzzone/PseCo
 
 point decoder
 对于SAM而言，在一张图片上均匀生成点（网格形式）作为prompts，如果点所在的位置有物体，SAM就可以生成该物体的mask，但是网格形式生成点，点不能保证落到所有物体上，特别是小物体。虽然可以让点更稠密，生成更多的点，但是效率不高
-所以要训练一个网络来生成点，让点尽可能多的落到物体上 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式">设计模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-10T20:18:03.287Z" title="Created 2024-03-10 20:18:03">2024-03-10</time></span></div><div class="content">设计模式
+所以要训练一个网络来生成点，让点尽可能多的落到物体上 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/11/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式">设计模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-10T20:18:03.287Z" title="Created 2024-03-11 04:18:03">2024-03-11</time></span></div><div class="content">设计模式
 工厂方法模式
 
 工厂模式是一种创建型设计模式, 有两套东西
@@ -186,12 +277,12 @@ point decoder
 抽象工厂模式
 
 产品
-抽象产品是一个接口, 具体产品实现 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/31/linux%E6%97%A0%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E4%BD%BF%E7%94%A8selenium%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E7%88%AC%E5%8F%96%E6%95%B0%E6%8D%AE/" title="linux无图形界面使用selenium自动登录爬取数据">linux无图形界面使用selenium自动登录爬取数据</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T20:18:03.219Z" title="Created 2024-01-31 20:18:03">2024-01-31</time></span></div><div class="content">linux无图形界面使用selenium自动登录爬取数据
+抽象产品是一个接口, 具体产品实现 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/02/01/linux%E6%97%A0%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E4%BD%BF%E7%94%A8selenium%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E7%88%AC%E5%8F%96%E6%95%B0%E6%8D%AE/" title="linux无图形界面使用selenium自动登录爬取数据">linux无图形界面使用selenium自动登录爬取数据</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T20:18:03.219Z" title="Created 2024-02-01 04:18:03">2024-02-01</time></span></div><div class="content">linux无图形界面使用selenium自动登录爬取数据
 对于一些cookie有效期较长的场景, 我们可以在浏览器devtool直接复制网络请求的curl命令, 再通过Convert curl commands to Python (curlconverter.com)转换为python脚本, 这样会自动带上cookie.但是对于cookie有效期较短或要求较为严格的场景, 就要使用selenium来模拟浏览器操作了, Selenium是广泛使用的模拟浏览器运行的库, 它是一个用于Web应用程序测试的工具.  Selenium测试直接运行在浏览器中，就像真正的用户在操作一样，并且支持大多数现代 Web 浏览器
 由于无图形界面不能直观地看到浏览器状态, 建议在windows上调试好爬虫脚本之后再放在linux用
 环境配置
 系统依赖12345apt-get install libxss1 libappindicator1 libindicator7#安装xvfb# xvfb是一种虚拟的窗口服务器，可以模拟图形界面。sudo apt-get install xvfb
-浏览器chrome要安装 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/30/linux%E5%B0%8F%E6%8A%80%E5%B7%A7%E5%A4%87%E5%BF%98/" title="linux小技巧备忘">linux小技巧备忘</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-30T23:18:03.178Z" title="Created 2024-01-30 23:18:03">2024-01-30</time></span></div><div class="content">linux小技巧备忘shell脚本
+浏览器chrome要安装 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/31/linux%E5%B0%8F%E6%8A%80%E5%B7%A7%E5%A4%87%E5%BF%98/" title="linux小技巧备忘">linux小技巧备忘</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-30T23:18:03.178Z" title="Created 2024-01-31 07:18:03">2024-01-31</time></span></div><div class="content">linux小技巧备忘shell脚本
 bash -x test.sh可以看到脚本执行情况, 类似边debug边执行
 
 可以使用echo $?查看上条命令返回值, 0表示成功, 非0失败
@@ -203,124 +294,4 @@ for
 12345678for ((i=0;i&lt;3;i++)); do	echo hhhdone---IP_LIST=&quot;127.0.0.1 172.17.0.1 1.1.1.1&quot;for IP in $IP_LIST; do    echo hhhdone
 
 
-linux三剑客awk1234# 正则匹配以`/dev`开头的行, 并打印第1 5列df -h | awk &#x27;/^\/dev/&#123;print $1,$5&#125;&#x27;# 选择第2行, 并打印最后一列free -m | awk &#x27;NR==2&# ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" title="大数据实验报告">大数据实验报告</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-18T20:18:03.178Z" title="Created 2024-01-18 20:18:03">2024-01-18</time></span></div><div class="content">大数据实验报告[toc]
-2 HDFS 分布式文件系统实战任务一：HDFS 常用操作
-步骤 1 help 命令
-
-
-
-  
-
-步骤 2 ls 命令
-
-
-步骤 3 mkdir 命令
-
-
-步骤 4 put 命令
-
-
-步骤 5 cat 命令
-
-
-步骤 6 text 命令
-
-
-步骤 7 moveFromLocal 命令
-
-
-步骤 8 appendToFile 命令
-
-
-步骤 9 cp 命令
-
-
-步骤 10 mv 命令
-
-
-步骤 11 get 命令
-
-
-步骤 12 getmerge 命令
-
-
-步骤 13 rm 命令
-
-
-步骤 14 df 命令  步骤 15 du 命令  步骤 16 count 命令
-
-
-
-任务二：回收站使用
-4 Hbase 列式数据库实战任务一：HBase 常用操作
-创建普通表
-
-
-增加数据  Scan 方式查询数据   Get 方式查询数据  指定条件查询数据
-
-
-查询多版本数据
-
-
-删除数据
-
-
-删除表
-
-
-
-任务二：创建预分 region 表
-以 rowkey 切分，随机分为 4 个 region
-
-
-
-  
-
-指定 region 的 startKey 和 endKey
- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/15/%E6%97%A0root%E9%85%8D%E7%BD%AE%E7%A7%91%E7%A0%94%E7%8E%AF%E5%A2%83/" title="无root配置科研环境">无root配置科研环境</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-15T20:18:03.287Z" title="Created 2024-01-15 20:18:03">2024-01-15</time></span></div><div class="content">无root配置科研环境安装ohmyzsh首先检查有没有zsh，并没有，先安装zsh
-安装zsh1234567891011wget -O zsh.tar.xz https://sourceforge.net/projects/zsh/files/latest/download --no-check-certificatemkdir zsh &amp;&amp; unxz zsh.tar.xz &amp;&amp; tar -xvf zsh.tar -C zsh --strip-components 1# 可以尝试直接编译安装,但大概率报错cd zsh# 编译zsh./configure --prefix=$HOME/app/zshmake &amp;&amp; make install# 安装完成后。加入环境变量.bashrcexport PATH=$HOME/app/zsh/bin:$PATH# 生效source ~/.bashrc
-执行./configure的时候应该就会报错, 报错的话就先编译安装ncurses吧
-123456wget http://ftp.gnu.org/pub/ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/10/zero-shot%20object%20counting%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB1/" title="zero-shot object counting论文阅读1">zero-shot object counting论文阅读1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-10T20:18:03.287Z" title="Created 2024-01-10 20:18:03">2024-01-10</time></span></div><div class="content">VLCounter: Text-aware Visual Representation for Zero-Shot Object Counting
-
-AAAI2024
-https://github.com/seunggu0305/VLCounter
-- zero-shot
-- 视觉语言模型
-- 在FSC-147上比clip-count的MAE低了零点几
-
-1. Visual-Language Base
-
-
-T: 语义嵌入向量  V: 块嵌入向量  S: 相似度图
-S表示图像块和文本的相似度程度，可以帮助解码器定位目标。
-        
-2. Visual-Language Counter
-2.1 语义条件下的提示微调 (SPT)
-
-        
-目的是突出显示相应区域的目标
-2.2 可学习的仿射变换 (LAT)
-由于物体计数的目标是找到物体的中心点而不是整个物体区域，相似图S中包含的信息与训练期间需要回传的损失之间可能会存在差异。
-通过将S变换为, 围绕单独的物体建立更加任务相关的视觉语义关联
-
- 是可学习的矩阵，使用排名感知对比损失直接优化计数图，以学习对象计数的正确激活度。
- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E9%80%9A%E8%BF%87RSSHub%E8%AE%A2%E9%98%85%E5%AD%A6%E9%99%A2%E9%80%9A%E7%9F%A5/" title="通过RSSHub订阅学院通知">通过RSSHub订阅学院通知</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.330Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">通过RSSHub订阅学院通知
-今天看到以为up主在介绍RSSHub, 遂入坑, 上午在了解RSS, 并搭建了RSSHub, 下午费了九牛二虎之力终于给学院写了个RSS订阅(只怪自己js学的不够通透)
-【干货分享】三分钟教你部署RSSHub!_哔哩哔哩_bilibili
-
-大连理工大学软件学院(新) (dlut.edu.cn)RSS订阅地址: https://rss.zaqai.com/ssdut
-路由: 默认是本科生通知, 即https://rss.zaqai.com/ssdut和https://rss.zaqai.com/ssdut/bkstz等价, 对应于本科生通知-大连理工大学软件学院(新) (dlut.edu.cn)
-还有学院通知: https://rss.zaqai.com/ssdut/xytz, 对应于学院通知-大连理工大学软件学院(新) (dlut.edu.cn)
-其他的通知对我来说用处不大, 所以没有适配, 大体上差不多, 只需要更改一些jquery选择器的东西
-RSSHub介绍
-
-万物皆可RSS, 其实就是给你提供一个大体框架, 具体爬取哪些元素要你自己写
-原理就是当 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3/" title="跨域解决">跨域解决</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.323Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">关于跨域出于安全问题考虑, 浏览器都会有跨域限制, 但这个限制只在浏览器端, 你都不想浏览器在和你的服务器交互时还和别的服务器有联系吧. 
-试想这样一种场景, 服务器A通过一系列认证手段信任了你的浏览器, 你的浏览器也可以自由地和服务器A交换数据. 忽然你点击某个链接, 跳转到服务器B提供的网页中, 而该网页包含一段js代码, 是去服务器A中取数据的, 这种情况下就非常危险了, 如果没有跨域限制, 浏览器就会就会将服务器A发来的数据显示出来, 服务器B也可以轻松地从服务器A取得数据(这些数据本应通过认证才可以取得). 
-
-协议 域名 端口号有一个不同, 都是跨域, 注意二级域名不同也是跨域
-
-跨域请求分类
-简单跨域请求
-请求方法是GET、HEAD或者POST，并且当请求方法是POST时，Content-Type必须是application/x-www-form-urlencoded, multipart/form-data或着text/plain中的一个值。
-请求中没有自定义HTTP头部(只有Accept、Content-Type、Accept-Language、Content-Lan ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#content-inner">7</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zaqai</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">66</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://blog.zaqai.com"><i class="iconfont icon-youxishoubing"></i><span>主页</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><p align="center"><img src="https://haiyong.site/img/img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：zq2551856565</p> <p align="center">QQ号：2551856565</p></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/28/nps%E6%B3%9B%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="nps泛域名解析内网穿透">nps泛域名解析内网穿透</a><time datetime="2024-03-28T10:18:03.219Z" title="Created 2024-03-28 10:18:03">2024-03-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/10/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%89%A9%E4%BD%93%E8%AE%A1%E6%95%B0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%20Point,%20Segment%20and%20Count_%20A%20Generalized%20Framework%20for%20Object%20Counting/" title="多模态物体计数论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting">多模态物体计数论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting</a><time datetime="2024-03-10T20:18:03.287Z" title="Created 2024-03-10 20:18:03">2024-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式">设计模式</a><time datetime="2024-03-10T20:18:03.287Z" title="Created 2024-03-10 20:18:03">2024-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/31/linux%E6%97%A0%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E4%BD%BF%E7%94%A8selenium%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E7%88%AC%E5%8F%96%E6%95%B0%E6%8D%AE/" title="linux无图形界面使用selenium自动登录爬取数据">linux无图形界面使用selenium自动登录爬取数据</a><time datetime="2024-01-31T20:18:03.219Z" title="Created 2024-01-31 20:18:03">2024-01-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/30/linux%E5%B0%8F%E6%8A%80%E5%B7%A7%E5%A4%87%E5%BF%98/" title="linux小技巧备忘">linux小技巧备忘</a><time datetime="2024-01-30T23:18:03.178Z" title="Created 2024-01-30 23:18:03">2024-01-30</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">57</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">January 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">66</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-06-10T11:43:54.159Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zaqai</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div></body></html>
+linux三剑客awk1234# 正则匹配以`/dev`开头的行, 并打印第1 5列df -h | awk &#x27;/^\/dev/&#123;print $1,$5&#125;&#x27;# 选择第2行, 并打印最后一列free -m | awk &#x27;NR==2&# ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/8/#content-inner">8</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zaqai</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">71</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://blog.zaqai.com"><i class="iconfont icon-youxishoubing"></i><span>主页</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><p align="center"><img src="https://haiyong.site/img/img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：zq2551856565</p> <p align="center">QQ号：2551856565</p></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/github%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93clone%20push%20pull/" title="github 私有仓库clone push pull">github 私有仓库clone push pull</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/CLIP-EBC_CLIP%20Can%20Count%20Accurately%20through%20Enhanced%20Blockwise%20Classification/" title="论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification">论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/Diffuse-Denoise-Count%EF%BC%9AAccurate%20Crowd-Counting%20with%20Diffusion%20Models/" title="论文阅读 Diffuse-Denoise-Count：Accurate Crowd-Counting with Diffusion Models">论文阅读 Diffuse-Denoise-Count：Accurate Crowd-Counting with Diffusion Models</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/Focus%20for%20Free%20in%20Density-Based%20Counting/" title="论文阅读 Focus for Free in Density-Based Counting">论文阅读 Focus for Free in Density-Based Counting</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/Point,%20Segment%20and%20Count_%20A%20Generalized%20Framework%20for%20Object%20Counting/" title="论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting">论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/06/"><span class="card-archive-list-date">June 2024</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/02/"><span class="card-archive-list-date">February 2024</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">60</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">1</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">January 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">71</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-06-10T11:58:28.772Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zaqai</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div></body></html>

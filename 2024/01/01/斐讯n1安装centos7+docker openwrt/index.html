@@ -1,0 +1,222 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>斐讯n1安装centos7+docker openwrt | Hexo</title><meta name="author" content="zaqai"><meta name="copyright" content="zaqai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="斐讯n1安装centos7+docker openwrt 首先声明,我的n1是降级过的,系统默认usb启动优先级大于emmc,所以可以直接将镜像写入u盘,通过u盘启动系统,同时通过脚本将系统写入emmc. 同时,由于n1的usb是2.0,推荐将常用系统写入emmc,而不是通过u盘启动(虽然emmc只有8G).亲测速度快的不是一点半点,最直观的感受就是执行yum update.  centos镜像N">
+<meta property="og:type" content="article">
+<meta property="og:title" content="斐讯n1安装centos7+docker openwrt">
+<meta property="og:url" content="https://blog.zaqai.com/2024/01/01/%E6%96%90%E8%AE%AFn1%E5%AE%89%E8%A3%85centos7+docker%20openwrt/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="斐讯n1安装centos7+docker openwrt 首先声明,我的n1是降级过的,系统默认usb启动优先级大于emmc,所以可以直接将镜像写入u盘,通过u盘启动系统,同时通过脚本将系统写入emmc. 同时,由于n1的usb是2.0,推荐将常用系统写入emmc,而不是通过u盘启动(虽然emmc只有8G).亲测速度快的不是一点半点,最直观的感受就是执行yum update.  centos镜像N">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2023-12-31T20:18:03.311Z">
+<meta property="article:modified_time" content="2023-12-31T12:19:53.289Z">
+<meta property="article:author" content="zaqai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.zaqai.com/2024/01/01/%E6%96%90%E8%AE%AFn1%E5%AE%89%E8%A3%85centos7+docker%20openwrt/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '斐讯n1安装centos7+docker openwrt',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-12-31 20:19:53'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">71</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">斐讯n1安装centos7+docker openwrt</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2023-12-31T20:18:03.311Z" title="Created 2024-01-01 04:18:03">2024-01-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2023-12-31T12:19:53.289Z" title="Updated 2023-12-31 20:19:53">2023-12-31</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="斐讯n1安装centos7+docker openwrt"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="斐讯n1安装centos7-docker-openwrt"><a href="#斐讯n1安装centos7-docker-openwrt" class="headerlink" title="斐讯n1安装centos7+docker openwrt"></a>斐讯n1安装centos7+docker openwrt</h1><blockquote>
+<p>首先声明,我的n1是降级过的,系统默认usb启动优先级大于emmc,所以可以直接将镜像写入u盘,通过u盘启动系统,同时通过脚本将系统写入emmc.</p>
+<p>同时,由于n1的usb是2.0,推荐将常用系统写入emmc,而不是通过u盘启动(虽然emmc只有8G).亲测速度快的不是一点半点,最直观的感受就是执行<code>yum update</code>.</p>
+</blockquote>
+<h3 id="centos镜像"><a href="#centos镜像" class="headerlink" title="centos镜像"></a>centos镜像</h3><p><a target="_blank" rel="noopener" href="https://www.right.com.cn/forum/thread-4061041-1-7.html">N1盒子 CentOS7.9系统镜像，支持写入EMMC - 斐讯无线路由器以及其它斐迅网络设备 - 恩山无线论坛 - Powered by Discuz! (right.com.cn)</a></p>
+<p>同时附上论坛上的简单教程:</p>
+<p><a target="_blank" rel="noopener" href="https://www.right.com.cn/forum/thread-6804025-1-1.html">分享N1盒子CentOS7.9系统下安装最新版本的宝塔面板linux7.7简单教程 - 斐讯无线路由器以及其它斐迅网络设备 - 恩山无线论坛 - Powered by Discuz! (right.com.cn)</a></p>
+<p><strong>特别感谢恩山论坛的各位大佬!</strong></p>
+<blockquote>
+<p>在此我也简单记录一下,以防某天重装系统:joy:</p>
+</blockquote>
+<p>修改写入emmc的脚本,添加上复制lib64文件夹的命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">vi /root/.install_os_to_emmc/install.sh</span><br><span class="line"></span><br><span class="line">在153行后添加下面命令</span><br><span class="line"></span><br><span class="line">echo &quot;Copy LIB64...&quot;</span><br><span class="line">tar -cf - lib64 | (cd $DIR_INSTALL; tar -xpf -)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://oss.zaqai.com/img/image-20220116094823830.png" alt="image-20220116094823830"></p>
+<h3 id="安装宝塔"><a href="#安装宝塔" class="headerlink" title="安装宝塔"></a>安装宝塔</h3><blockquote>
+<p>禁止宝塔打开swap内存,纯净系统只占用200-300MB内存,对于n1的2G内存来说,基本上够用了,何况8G的emmc也很稀缺</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">修改宝塔安装脚本</span><br><span class="line">删除或注释掉以下三条命令</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$&#123;MEM_TOTAL&#125;</span>&quot;</span> -le <span class="string">&quot;1&quot;</span> ];<span class="keyword">then</span></span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">       Auto_Swap</span></span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash"><span class="keyword">fi</span></span></span><br></pre></td></tr></table></figure>
+
+<p>关于宝塔安装nginx和php,听说是编译安装性能更优,只是安装较慢,本人亲测Nginx 1.20.2  Nginx 1.18  php7.4均可编译安装成功</p>
+<h3 id="安装docker"><a href="#安装docker" class="headerlink" title="安装docker"></a>安装docker</h3><p>网上也有很多教程,我就直接一点</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">yum install -y yum-utils device-mapper-persistent-data lvm2</span><br><span class="line">yum-config-manager --add-repo http://download.docker.com/linux/centos/docker-ce.repo</span><br><span class="line">yum-config-manager --add-repo http://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo</span><br><span class="line">yum install docker-ce docker-ce-cli containerd.io</span><br><span class="line">systemctl start docker</span><br><span class="line">systemctl enable docker</span><br></pre></td></tr></table></figure>
+
+<h3 id="docker安装openwrt"><a href="#docker安装openwrt" class="headerlink" title="docker安装openwrt"></a>docker安装openwrt</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">首先开启网卡混杂模式</span><br><span class="line">ip link set eth0 promisc on</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">创建vlan</span></span><br><span class="line">docker network create -d macvlan --subnet=192.168.10.0/24 --gateway=192.168.10.1 -o parent=eth0 macnet</span><br></pre></td></tr></table></figure>
+
+<p>网段与主路由相同</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">docker run --restart always --name openwrt -d --network macnet --privileged sulinggg/openwrt:latest /sbin/init</span><br><span class="line">此时openwrt已在运行</span><br><span class="line">进入容器修改lan接口</span><br><span class="line">docker exec -it openwrt bash</span><br><span class="line">vi /etc/config/network</span><br></pre></td></tr></table></figure>
+
+<p>只需修改<code>config interface &#39;lan&#39;</code>中的配置</p>
+<p>ipaddr为主路由网段下的一个ip</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">option ipaddr &#x27;192.168.1.111&#x27;</span><br><span class="line">option gateway &#x27;192.168.1.1&#x27;</span><br><span class="line">option dns &#x27;192.168.1.1&#x27;</span><br></pre></td></tr></table></figure>
+
+<p>重启<code>/etc/init.d/network restart</code>之后就可以在浏览器输入<code>192.168.1.111</code>进入openwrt管理页面,默认密码为password</p>
+<h3 id="关于旁路网关上网"><a href="#关于旁路网关上网" class="headerlink" title="关于旁路网关上网"></a>关于旁路网关上网</h3><p>使用<code>服务</code>-&gt;<code>PassWall</code>操作就行,实际上就是一个代理工具客户端</p>
+<p>配置好之后,只需在设备上修改为静态ip,注意网关和DNS都要改为openwrt的ip<code>192.168.1.111</code>,大功告成,可以去测试一下</p>
+<p><font color="red">记得去接口里把桥接关掉!!!</font></p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><ol>
+<li><p>解决宿主机无法和docker的macvlan通信</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://piaoyun.cc/1527.html">Docker的macvlan模式容器与宿主机通信问题-飘云 (piaoyun.cc)</a></p>
+<p><a target="_blank" rel="noopener" href="https://smalloutcome.com/2021/07/18/Docker-%E4%BD%BF%E7%94%A8-macvlan-%E7%BD%91%E7%BB%9C%E5%AE%B9%E5%99%A8%E4%B8%8E%E5%AE%BF%E4%B8%BB%E6%9C%BA%E7%9A%84%E9%80%9A%E4%BF%A1%E8%BF%87%E7%A8%8B/">Docker 使用 macvlan 网络容器与宿主机的通信过程 | 一小步 (smalloutcome.com)</a></p>
+</blockquote>
+<p>一句话:</p>
+<blockquote>
+<p>mavlan 虚拟出来的网口不能和父网口直通，但是可以和同一子网的其他网口互通（包括其他虚拟出来的网口）。</p>
+<p>通过在宿主机上用 macvlan 添加一个虚拟网口 mynet ，并在宿主机上配置路由到容器的数据包由 mynet 发出，就架起了宿主机与容器的通信桥梁。<br>宿主机发往容器的数据包，由 mynet 发给容器；容器发往宿主机的数据包先发给 mynet，再由 mynet 转交给 eth0。</p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">ip link add mynet link eth0 type macvlan mode bridge</span><br><span class="line"><span class="meta prompt_"># </span><span class="language-bash">ip addr add 192.168.1.112 dev mynet</span></span><br><span class="line">ip link set mynet up</span><br><span class="line">ip route add 192.168.1.111 dev mynet</span><br></pre></td></tr></table></figure>
+
+<p>至此, 宿主机和容器应该是能互相ping通</p>
+</li>
+<li><p>解决宿主机使用openwrt网关时无法联网</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/lisaac/blog/issues/4">在docker中运行openwrt · Issue #4 · lisaac&#x2F;blog (github.com)</a></p>
+</blockquote>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ip route del default #删除默认路由</span><br><span class="line">ip route add default via 192.168.1.111 dev mynet # 设置静态路由</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="一些思考"><a href="#一些思考" class="headerlink" title="一些思考"></a>一些思考</h4><blockquote>
+<p>我们使用代理时,软件将我们的网络请求拦截,进而向代理服务器发送请求,代理服务器再向我们的目标服务器发送我们被软件拦截的原始请求,最后再返回</p>
+<p>使用旁路网关时,我们的设备首先将请求发送至openwrt,在openwrt端一番操作再返回</p>
+<p>两种方式本质都是一样的,只是第一种一个设备一个代理,第二种多个设备一个代理,对我们的使用体验来说,当然是第二种更好</p>
+</blockquote>
+<h3 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h3><blockquote>
+<p><a target="_blank" rel="noopener" href="https://mlapp.cn/376.html">在Docker 中运行 OpenWrt 旁路网关 | 美丽应用 (mlapp.cn)</a></p>
+</blockquote>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://blog.zaqai.com">zaqai</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://blog.zaqai.com/2024/01/01/%E6%96%90%E8%AE%AFn1%E5%AE%89%E8%A3%85centos7+docker%20openwrt/">https://blog.zaqai.com/2024/01/01/%E6%96%90%E8%AE%AFn1%E5%AE%89%E8%A3%85centos7+docker%20openwrt/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/01/01/%E7%89%9B%E5%AE%A2%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" title="牛客刷题笔记"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">牛客刷题笔记</div></div></a></div><div class="next-post pull-right"><a href="/2024/01/01/%E5%AE%B6%E7%94%A8%E7%94%B5%E5%99%A8%E5%8A%9F%E7%8E%87%E7%BB%9F%E8%AE%A1/" title="家用电器功率统计"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">家用电器功率统计</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zaqai</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">71</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://blog.zaqai.com"><i class="iconfont icon-youxishoubing"></i><span>主页</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><p align="center"><img src="https://haiyong.site/img/img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：zq2551856565</p> <p align="center">QQ号：2551856565</p></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%96%90%E8%AE%AFn1%E5%AE%89%E8%A3%85centos7-docker-openwrt"><span class="toc-number">1.</span> <span class="toc-text">斐讯n1安装centos7+docker openwrt</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#centos%E9%95%9C%E5%83%8F"><span class="toc-number">1.0.1.</span> <span class="toc-text">centos镜像</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%AE%9D%E5%A1%94"><span class="toc-number">1.0.2.</span> <span class="toc-text">安装宝塔</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85docker"><span class="toc-number">1.0.3.</span> <span class="toc-text">安装docker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#docker%E5%AE%89%E8%A3%85openwrt"><span class="toc-number">1.0.4.</span> <span class="toc-text">docker安装openwrt</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E6%97%81%E8%B7%AF%E7%BD%91%E5%85%B3%E4%B8%8A%E7%BD%91"><span class="toc-number">1.0.5.</span> <span class="toc-text">关于旁路网关上网</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%A5%E5%85%85"><span class="toc-number">1.0.6.</span> <span class="toc-text">补充</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80%E4%BA%9B%E6%80%9D%E8%80%83"><span class="toc-number">1.0.6.1.</span> <span class="toc-text">一些思考</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">1.0.7.</span> <span class="toc-text">参考</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/github%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93clone%20push%20pull/" title="github 私有仓库clone push pull">github 私有仓库clone push pull</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/CLIP-EBC_CLIP%20Can%20Count%20Accurately%20through%20Enhanced%20Blockwise%20Classification/" title="论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification">论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/Diffuse-Denoise-Count%EF%BC%9AAccurate%20Crowd-Counting%20with%20Diffusion%20Models/" title="论文阅读 Diffuse-Denoise-Count：Accurate Crowd-Counting with Diffusion Models">论文阅读 Diffuse-Denoise-Count：Accurate Crowd-Counting with Diffusion Models</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/Focus%20for%20Free%20in%20Density-Based%20Counting/" title="论文阅读 Focus for Free in Density-Based Counting">论文阅读 Focus for Free in Density-Based Counting</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/Point,%20Segment%20and%20Count_%20A%20Generalized%20Framework%20for%20Object%20Counting/" title="论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting">论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zaqai</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div></body></html>

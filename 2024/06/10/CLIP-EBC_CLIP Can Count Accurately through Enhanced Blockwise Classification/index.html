@@ -1,0 +1,209 @@
+<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification | Hexo</title><meta name="author" content="zaqai"><meta name="copyright" content="zaqai"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="https:&#x2F;&#x2F;github.com&#x2F;Yiming-M&#x2F;CLIP-EBC 2024.3 arxiv 55.0 and 6.3 on ShanghaiTech part A and part B 基于分类的计数方法，提出了Enhanced Blockwise Classification框架，现有的基于回归的方法可以无缝地集成到EBC框架中 EBC在discretization, label co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification">
+<meta property="og:url" content="https://blog.zaqai.com/2024/06/10/CLIP-EBC_CLIP%20Can%20Count%20Accurately%20through%20Enhanced%20Blockwise%20Classification/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="https:&#x2F;&#x2F;github.com&#x2F;Yiming-M&#x2F;CLIP-EBC 2024.3 arxiv 55.0 and 6.3 on ShanghaiTech part A and part B 基于分类的计数方法，提出了Enhanced Blockwise Classification框架，现有的基于回归的方法可以无缝地集成到EBC框架中 EBC在discretization, label co">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png">
+<meta property="article:published_time" content="2024-06-10T12:18:03.178Z">
+<meta property="article:modified_time" content="2024-06-10T11:58:02.043Z">
+<meta property="article:author" content="zaqai">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.zaqai.com/2024/06/10/CLIP-EBC_CLIP%20Can%20Count%20Accurately%20through%20Enhanced%20Blockwise%20Classification/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy Successful',
+    error: 'Copy Error',
+    noSupport: 'Browser Not Supported'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: 'Just now',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.11.0/dist/infinitegrid.min.js',
+    buttonText: 'Load More'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-06-10 19:58:02'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">71</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2024-06-10T11:58:02.043Z" title="Updated 2024-06-10 19:58:02">2024-06-10</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post Views:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><blockquote>
+<p><a target="_blank" rel="noopener" href="https://github.com/Yiming-M/CLIP-EBC">https://github.com/Yiming-M/CLIP-EBC</a><br>
+2024.3 arxiv<br>
+55.0 and 6.3 on ShanghaiTech part A and part B<br>
+基于分类的计数方法，提出了Enhanced Blockwise Classification框架，现有的基于回归的方法可以无缝地集成到EBC框架中<br>
+EBC在discretization, label correction, and loss function三个方面提高基于分类的计数方法的性能<br>
+基于EBC，提出CLIP-EBC，完全使用CLIP来生成人群密度图</p>
+</blockquote>
+<blockquote>
+<p>基于回归的计数方法通常是编码器解码器架构，回归密度图<br>
+基于分类的计数方法，将[0,♾️]的整数分为不重叠的间隔，目标就是将预测的数值分类到正确的间隔。可以增加大数值的样本数量，解决计数值的长尾分布问题</p>
+</blockquote>
+<h2 id="方法">方法</h2>
+<h3 id="Enhanced-Blockwise-Classification-EBC">Enhanced Blockwise Classification(EBC)</h3>
+<p>基于回归生成密度图的方法面临大计数值的样本不足的问题<br>
+EBC将计数值分组到bin中，以增加每个bin的样本量，从而缓解了样本不平衡的问题。<br>
+<img src="https://oss.zaqai.com/img/202404161627519.png" alt="image.png"><br>
+<img src="https://math.now.sh?inline=%5C%7B%5Cmathcal%7BB%7D_i%5Cmid%20i%3D1%2C%5Ccdots%2Cn%5C%7D" style="filter: opacity(90%);transform:scale(0.85);text-align:center;display:inline-block;margin: 0;"/>  是n个提前定义好的箱子，实际上表示一个整数的范围，如10-20<br>
+<img src="https://math.now.sh?inline=%5Cboldsymbol%7BP%7D%5E*%3An%5Ctimes%7Bh%7D%5Ctimes%7Bw%7D" style="filter: opacity(90%);transform:scale(0.85);text-align:center;display:inline-block;margin: 0;"/>  h=H//r, w=H//r, r是模型相关的放缩因子<br>
+<img src="https://math.now.sh?inline=%5Cboldsymbol%7BP%7D_%7B%3A%2Ci%2Cj%7D%5E*" style="filter: opacity(90%);transform:scale(0.85);text-align:center;display:inline-block;margin: 0;"/>  表示该位置的可能性分数，共有n个值，对应n个箱子<br>
+<img src="https://math.now.sh?inline=%5Cboldsymbol%7BY%7D_%7Bi%2Cj%7D%5E*%3D%5Csum_%7Bk%3D1%7D%5Ena_k%5Ccdot%5Cboldsymbol%7BP%7D_%7Bk%2Ci%2Cj%7D%5E*" style="filter: opacity(90%);transform:scale(0.85);text-align:center;display:inline-block;margin: 0;"/>  Y是预测的密度图，a是箱子的代表值(如范围的中间值)<br>
+现有的基于回归的方法可以很容易地通过只改变输出维度来定制以适应EBC。<br>
+<img src="https://oss.zaqai.com/img/202404161655302.png" alt="image.png"></p>
+<h4 id="离散化">离散化</h4>
+<p>高斯平滑获取GT密度图的方法，由于人头尺度不同，使用固定的核大小，可能会引入噪声<br>
+<img src="https://oss.zaqai.com/img/202404161706990.png" alt="image.png"><br>
+作者提出绕过高斯平滑，如果一个人头特定的区域内，只用那个块来预测这个人头的存在，同时排除其他块来做出这样的预测。</p>
+<p>因为计数值可能不符合均匀分布，使用中间值作为bin的代表值不是最优的<br>
+提出使用每个箱子中的平均计数值作为代表点<br>
+<img src="https://math.now.sh?inline=a_i%3D%5Cfrac1%7B%7C%5Cmathcal%7BB%7D_i%7C%7D%5Csum_%7Bk%3D1%7D%5EM1%28c_k%5Cin%5Cmathcal%7BB%7D_i%29%5Ccdot%20c_k%2C" style="filter: opacity(90%);transform:scale(0.85);text-align:center;display:inline-block;margin: 0;"/></p>
+<h4 id="标签校正">标签校正</h4>
+<p>对于特别密集的人群，实际上可能包含很多人头，但受限于分辨率，只能观察到较小的人头数<br>
+作者将固定大小图像块中可观察到的人的最大数量限制在一个小的范围内，完全由补丁大小决定。<br>
+最大数量<img src="https://math.now.sh?inline=m%3D%28r%2F%2Fs%29%5E2" style="filter: opacity(90%);transform:scale(0.85);text-align:center;display:inline-block;margin: 0;"/>，s是一个人头可被识别的最小尺寸，r是块大小<br>
+<img src="https://oss.zaqai.com/img/202404162235888.png" alt="image.png"></p>
+<h4 id="损失函数">损失函数</h4>
+<p>之前的基于分类的方法的损失函数只关注分类误差，忽视了预测值和GT的差异，尽管两个概率分布分类错误率相同，但他们可能具有不同的期望值，即它们在样本空间上的平均值可能不同<br>
+距离感知交叉熵损失（DACE）<br>
+<img src="https://math.now.sh?inline=%5Cbegin%7Baligned%7D%5Cmathcal%7BL%7D_%7B%5Cmathrm%7BDACE%7D%7D%3D%26%5Cmathcal%7BL%7D_%7B%5Cmathrm%7Bclass%7D%7D%28%5Cboldsymbol%7BP%7D%5E*%2C%5Cboldsymbol%7BP%7D%29%2B%5Clambda%5Cmathcal%7BL%7D_%7B%5Cmathrm%7Bcount%7D%7D(%5Cboldsymbol%7BY%7D%5E*%2C%5Cboldsymbol%7BY%7D)%5C%5C%26%3D-%5Csum_%7Bi%3D1%7D%5E%7BH%2F%2Fr%7D%5Csum_%7Bj%3D1%7D%5E%7BW%2F%2Fr%7D%5Csum_%7Bk%3D1%7D%5En%5Cmathbb%7B1%7D(%5Cboldsymbol%7BP%7D_%7Bk%2Ci%2Cj%7D%3D1)%5Clog%5Cboldsymbol%7BP%7D_%7Bk%2Ci%2Cj%7D%5E*%5C%5C%26%2B%5Clambda%5Cmathcal%7BL%7D_%7B%5Cmathrm%7Bcount%7D%7D(%5Cboldsymbol%7BY%7D%5E*%2C%5Cboldsymbol%7BY%7D)%2C%5Cend%7Baligned%7D" style="filter: opacity(90%);transform:scale(0.85);text-align:center;display:inline-block;margin: 0;"/><br>
+P是one-hot GT概率图，<img src="https://math.now.sh?inline=P%5E*" style="filter: opacity(90%);transform:scale(0.85);text-align:center;display:inline-block;margin: 0;"/>是预测出的概率图，维度[n,h,w],n是箱子的数量<br>
+Y是密度图</p>
+<h3 id="CLIP-EBC">CLIP-EBC</h3>
+<p><img src="https://oss.zaqai.com/img/202404161627519.png" alt="image.png"><br>
+CLIP-EBC对CLIP的图像编码器最后的层做了修改，去除池化层，用1×1卷积替换线性投影层。这种修改允许保存本地信息，这在人群计数中起着至关重要的作用。输出[d,h,w]的特征图，h=H//r, r是patch尺寸<br>
+文本提示</p>
+<blockquote>
+<p>There is/are bi person/people<br>
+There is/are between min(Bi) and max(Bi) person/people<br>
+There are more than m people</p>
+</blockquote>
+<h2 id="性能">性能</h2>
+<p><img src="https://oss.zaqai.com/img/202404162329604.png" alt="image.png"><br>
+EBC确实有效，CLIP-EBC (ResNet50, ours)  ResNet50用在了哪里？</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>Author: </span><span class="post-copyright-info"><a href="https://blog.zaqai.com">zaqai</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>Link: </span><span class="post-copyright-info"><a href="https://blog.zaqai.com/2024/06/10/CLIP-EBC_CLIP%20Can%20Count%20Accurately%20through%20Enhanced%20Blockwise%20Classification/">https://blog.zaqai.com/2024/06/10/CLIP-EBC_CLIP%20Can%20Count%20Accurately%20through%20Enhanced%20Blockwise%20Classification/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.3/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2024/06/10/github%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93clone%20push%20pull/" title="github 私有仓库clone push pull"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Previous</div><div class="prev_info">github 私有仓库clone push pull</div></div></a></div><div class="next-post pull-right"><a href="/2024/06/10/Diffuse-Denoise-Count%EF%BC%9AAccurate%20Crowd-Counting%20with%20Diffusion%20Models/" title="论文阅读 Diffuse-Denoise-Count：Accurate Crowd-Counting with Diffusion Models"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">Next</div><div class="next_info">论文阅读 Diffuse-Denoise-Count：Accurate Crowd-Counting with Diffusion Models</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zaqai</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">71</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://blog.zaqai.com"><i class="iconfont icon-youxishoubing"></i><span>主页</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><p align="center"><img src="https://haiyong.site/img/img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：zq2551856565</p> <p align="center">QQ号：2551856565</p></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Contents</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%96%B9%E6%B3%95"><span class="toc-number">1.</span> <span class="toc-text">方法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Enhanced-Blockwise-Classification-EBC"><span class="toc-number">1.1.</span> <span class="toc-text">Enhanced Blockwise Classification(EBC)</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%A6%BB%E6%95%A3%E5%8C%96"><span class="toc-number">1.1.1.</span> <span class="toc-text">离散化</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E6%A0%A1%E6%AD%A3"><span class="toc-number">1.1.2.</span> <span class="toc-text">标签校正</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%8D%9F%E5%A4%B1%E5%87%BD%E6%95%B0"><span class="toc-number">1.1.3.</span> <span class="toc-text">损失函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#CLIP-EBC"><span class="toc-number">1.2.</span> <span class="toc-text">CLIP-EBC</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%A7%E8%83%BD"><span class="toc-number">2.</span> <span class="toc-text">性能</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/github%20%E7%A7%81%E6%9C%89%E4%BB%93%E5%BA%93clone%20push%20pull/" title="github 私有仓库clone push pull">github 私有仓库clone push pull</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/CLIP-EBC_CLIP%20Can%20Count%20Accurately%20through%20Enhanced%20Blockwise%20Classification/" title="论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification">论文阅读 CLIP-EBC_CLIP Can Count Accurately through Enhanced Blockwise Classification</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/Diffuse-Denoise-Count%EF%BC%9AAccurate%20Crowd-Counting%20with%20Diffusion%20Models/" title="论文阅读 Diffuse-Denoise-Count：Accurate Crowd-Counting with Diffusion Models">论文阅读 Diffuse-Denoise-Count：Accurate Crowd-Counting with Diffusion Models</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/Focus%20for%20Free%20in%20Density-Based%20Counting/" title="论文阅读 Focus for Free in Density-Based Counting">论文阅读 Focus for Free in Density-Based Counting</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/06/10/Point,%20Segment%20and%20Count_%20A%20Generalized%20Framework%20for%20Object%20Counting/" title="论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting">论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting</a><time datetime="2024-06-10T12:18:03.178Z" title="Created 2024-06-10 20:18:03">2024-06-10</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zaqai</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div></body></html>
