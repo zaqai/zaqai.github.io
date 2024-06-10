@@ -9,7 +9,7 @@
 <meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.zaqai.com/page/4/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
   translate: undefined,
   noticeOutdate: undefined,
   highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
@@ -51,7 +51,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-12-31 12:53:31'
+  postUpdate: '2024-06-10 11:41:11'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -149,143 +149,81 @@
       }
       detectApple()
     })(window)</script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/mybatis/" title="mybatis">mybatis</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.221Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">项目概览
-pom.xml123456789101112131415161718192021222324252627282930313233343536&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;    &lt;groupId&gt;org.example&lt;/groupId&gt;    &lt;a ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/Maven%E7%AC%94%E8%AE%B0/" title="Maven笔记">Maven笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.219Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">Maven笔记依赖冲突解决方案
-依赖冲突: 相同jar包的不同版本被直接或间接包含进项目中
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">66</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/ubuntu%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" title="ubuntu安装教程">ubuntu安装教程</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.245Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">安装ssh判断是否安装1ssh localhost
+安装1apt-get install openssh-server
+启动1/etc/init.d/ssh start
+安装nodejs编译的shadowsocks前戏12apt install nodejsapt install npm
+安装1npm i -g shadowsocks
+安装位置123/usr/local/lib/node_modules/shadowsocks./config.json #配置文件./bin/ssserver # 启动二进制文件
+启动1./bin/ssserver
 
-可通过mvn -Dverbose dependency:tree查看依赖
-解决依赖冲突
-使用第一声明者优先原则
+守护进程pm2 守护ssserver安装1npm i -g pm2
+配置开机自启1pm2 startup
+创建配置文件
+{  “apps”:    {      “name”: “ssserver”,      “cwd”: “&#x2F;usr&#x2F;local&#x2F;lib&#x2F;node_modules&#x2F;shadowsocks&#x2F;bin”,      “script”: “.&#x2F;ssserver” ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/UBS%E5%AE%9E%E4%B9%A0%E6%80%BB%E7%BB%93/" title="UBS实习总结">UBS实习总结</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.238Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">UBS实习总结英语收获很多, 比如英文邮件格式啊, 一些职场英语简称啊, 当然还有单词, 和其让人用英语交流.
+在这里, 会让你感觉有些东西用中文表达出来有些怪, 因为大家都是用英语表达这个东西, 比如deploy, build, 也就造成了这样地现象, 每说一句话, 都要夹杂一些英语.
+每次开会, 都要先确定一下开会人数, 如果人很多, 摸鱼就好, 如果人少, 或者都是自己组里的, 大概率是要发言了, 特别是有外国人参加的会议, 都要提前写好发言稿. 比如ACQA data weekly sync up, Andrea的会议
+万幸的是, 带我做项目的是伦敦华人Guo Rui, 每次catch up可以用中文, 当然如果是一个外国人的话, 可能我的英语会更上一层楼? 那样的话, 可能我也会更加难受.
+这里的电脑默认都是英文, VM里甚至没有中文输入法… 最开始那阵真的不习惯, 他甚至屏蔽了百度翻译, 谷歌翻译等等市面上见得到的翻译网站, 在内部搭建了一个翻译平台, 极其难用, 每次翻译要勾选三个I confirm… 而且看请求里会带上自己的GPN? 难道翻译个东西还要被统计吗? 好在另 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/tomcat%E9%83%A8%E7%BD%B2java/" title="tomcat部署java">tomcat部署java</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.235Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">tomcat部署javajava文件12345678910111213import java.io.*;import jakarta.servlet.*;import jakarta.servlet.http.*;public class hello extends HttpServlet &#123;    public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException &#123;        response.setContentType(&quot;text/html&quot;);        PrintWriter out = response.getWriter();        out.println(&quot;&lt;h1&gt;hello&lt;/h1&gt;&quot;);    &#125;&#125;
 
-在pom.xml文件自上而下，先声明的jar坐标，就先引用该jar的传递依赖
+编译1javac -d . -classpath E:\javalib\apache- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/SSH%E9%9A%A7%E9%81%93%E8%BD%AC%E5%8F%91/" title="SSH隧道转发">SSH隧道转发</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.234Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">SSH隧道转发本地转发
+SSH客户端监听来自某个端口的连接，当它收到连接时，将请求通过隧道转发到SSH服务器；然后SSH服务器将请求转到目标端口。
 
-使用路径近者优先原则
-
-即直接依赖优先于间接依赖, 将需要使用的版本放入pom.xml中, 这样项目就会使用你需要的版本, 而不是通过间接依赖传递的版本
-
-排除依赖
-
-1234567891011&lt;dependency&gt;    &lt;groupId&gt;org.springframework&lt;/groupId&gt;    &lt;artifactId&gt;spring-context&lt;/artifactId&gt;    &lt;version&gt;5.2.7.RELEASE&lt;/version&gt;    &lt;exclusions&gt;        &lt;exclusion&gt;            &lt;artifactId&gt;spring- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/linux%E5%B8%B8%E7%94%A8%E5%B7%A5%E5%85%B7/" title="linux常用工具">linux常用工具</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.210Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">screen安装1234# CentOSyum install screen# Debian/Ubuntuapt install screen
-创建12345# 创建一个叫Hello的虚拟终端screen -S Helloscreen -R Hello#使用-R创建，如果之前有创建唯一一个同名的screen，则直接进入之前创建的screen#使用-S创建和直接输入screen创建的虚拟终端，不会检录之前创建的screen（也就是会创建同名的screen)
-
-
-Ctril+a，再按d ,回到主界面,screen后台运行,处于Detached
-
-操作123screen -ls # 查看已开的screenscreen -r|R [pid/name] # 进入screen,pid/name：为虚拟终端PID或Name
-kill掉screen12screen -S &#123;session_name&#125; -X quit # kill进入终端,输入exit,退出
-
-两者本质一样,第一个在主终端指定screen并执行exit命令,第二个直接进入screen执行exit命令
-
-ss(Sock ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/linux%E5%AE%89%E8%A3%85texlive%E5%B9%B6%E4%BD%BF%E7%94%A8vscode%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5/" title="linux安装texlive并使用vscode远程连接">linux安装texlive并使用vscode远程连接</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.209Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">linux安装texlive并使用vscode远程连接
-本来一直都是在windows上写latex, 奈何实在感觉编译太慢了, 虽然也有一些优化方法(下面会讲), 但切换为linux才是更加geek的方式, 正巧我家里就有一台N100的零刻的小主机, 系统为Ubuntu, 硬盘为M.2 PCIe SSD, 内存是DDR5 4800. 秒杀我的R7 6800H的windows笔记本!
-
-提高LaTeX的编译速度
-取消压缩
-1\special&#123;dvipdfmx:config z 0&#125; %取消PDF压缩，加快速度，最终版本生成的时候最好把这句话注释掉
-
-确实提升很大, 但是让我原本15M的pdf变成了160+M, 打开查看都要转圈圈的那种
-对比测试: 只使用xelatex命令(不用xelatex -&gt; bibtex -&gt; xelatex*2)
+1ssh -L [bind_address:]localport:host:hostport remotehost
 
 
+bind_address限制了ssh客户端的监听地址, localport表示监听ssh客户端的该端口, host是remotehost可以访问的地址, hostport是host所监听的端口
+效果就是访问ssh客户端的localport可以访问host的hostport
+bind_address通常有127.0.0.1 [::1] 0.0.0.0 [::] *, man里说省略这个参数&#x3D;*, 我实测好像&#x3D;localhost
 
 
-压缩
-取消压缩
+远程转发
+适用于将ssh客户端所能访问的服务暴露给remotehost, 也就是内网穿透
+
+1ssh -R [bind_address:]port:host:hostport remotehost
+
+
+bind_address好像没啥用, port是remotehost所监听 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/python+ffmpeg%20%E6%89%B9%E9%87%8F%E8%A7%86%E9%A2%91%E8%BD%AC%E7%A0%81/" title="python+ffmpeg 批量视频转码">python+ffmpeg 批量视频转码</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.233Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">python+ffmpeg 批量视频转码
+为什么要转码? 现在大多数视频编码为h264, 而家里的车机系统比较老, 无法解码h264, 但可以解码mpeg4
+为什么不选择格式工厂等软件? 最重要的一点: 不符合程序员的身份(也不能写博客啊)
+
+安装ffmpeg传送门ffmpeg-5.0-essentials_build_1.zip
+官网下载压缩包, 解压到自定义位置, 环境变量path填入bin目录就好了, 如C:\develop\ffmpeg-5.0-essentials_build\bin
+测试安装成功
+查看视频编码没想到potplayer居然不显示视频编码格式, 可能是我方法不对
+
+上图中的视频为h264编码, 在文件信息中却找不到h264字眼
+但他的编码信息在ffmpeg无所遁形: ffprobe -i 095一生何求-陈百强.mkv -show_streams -select_streams v -print_format json
+附上转换完成后查看视频编码信息:
+
+python代码1234567891011121314151617import osdef convert( ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/python%20jupyter-notebook%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E4%B8%8E%E5%8F%AF%E8%A7%86%E5%8C%96%E7%AC%94%E8%AE%B0/" title="python jupyter-notebook数据分析与可视化笔记">python jupyter-notebook数据分析与可视化笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.232Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">python jupyter-notebook数据分析与可视化笔记123import matplotlib.pyplot as plt  # 导入绘图库plt.rcParams[&#x27;font.sans-serif&#x27;] = [&#x27;SimHei&#x27;]  # 用来正常显示中文标签plt.rcParams[&#x27;axes.unicode_minus&#x27;] = False  # 用来正常显示负号
+
+123data[u&#x27;销量&#x27;][(data[u&#x27;销量&#x27;] &lt; 400) | (data[u&#x27;销量&#x27;] &gt; 5000)] = None  # 过滤异常值，将其变为空值df[][]根据第二个[]中的真值来决定选择
+
+12(data[&#x27;销量&#x27;].isnull())[0]返回真值,表示该列第0行空不空,data[&#x27;销量&#x27;].isnull()返回一个series(list)
+
+1234567from scipy.interpolate import lag ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/n1%E5%A4%87%E5%BF%98%E7%AC%94%E8%AE%B0/" title="n1备忘笔记">n1备忘笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.230Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">安装docker12345curl -fsSL https://get.docker.com | bashsystemctl start dockerservice docker startsystemctl enable docker.servicesystemctl status docker.service
 
 
 
-windows
-36.57s
-9.53s
 
 
-linux
-21.73s
-3.47s
+webdav1234cd /root/app/webdavwget https://hub.fastgit.org/hacdias/webdav/releases/download/v4.1.1/linux-arm64-webdav.tar.gztar -xvzf linux-arm64-webdav.tar.gzvi /root/app/webdav/config.yaml
 
+1234567891011121314151617# Server related settingsaddress: &quot;[::]&quot;port: 15108auth: truetls: falsecert: cert.pemkey: key.pem# Default user ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/n1%E4%BB%8Elinux%E5%88%B7%E5%88%B0%E5%AE%89%E5%8D%93TV/" title="n1从linux刷到安卓TV">n1从linux刷到安卓TV</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.229Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">n1从linux刷到安卓TV常规方法: 线刷去年是这样刷的, 大致流程就是使用N1降级工具将n1恢复到线刷模式, 然后就可以使用USB burning tool刷入.
+但是恢复到线刷模式需要使用adb连接n1, 而linux系统是没有adb的, 也就卡在了这一步
+(由于去年没做笔记, 也忘了到底怎么做的…😒)
+更好的方法: ddbr
+该方法只需要一个U盘就可以, 只要你的n1可以从U盘启动, 就没问题, 非常nice
+https://www.right.com.cn/forum/forum.php?mod=viewthread&amp;tid=8228200&amp;highlight=n1%2BDDBR
 
+U盘烧录armbian镜像 –&gt; 使用U盘启动 –&gt; ddbr命令restore目标系统 –&gt; 完成之后emmc就是目标系统了
+文件地址: https://alist.uwbanner.cn/a/%E6%8A%98%E8%85%BE/n1/N1-DDBR.zip
+</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/n1-docker-openwrt%E5%AE%9E%E7%8E%B0ipv4ipv6%E5%8F%8C%E6%A0%88%E7%BD%91%E7%BB%9C/" title="n1-docker-openwrt实现ipv4ipv6双栈网络">n1-docker-openwrt实现ipv4ipv6双栈网络</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.222Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">n1-docker-openwrt实现ipv4&#x2F;ipv6双栈网络主要参考恩山论坛两篇帖子
+【新提醒】回馈论坛！整理发布docker openwrt ipv6&#x2F;ipv4，自由DIY任意镜像-多次测试成功 - OPENWRT专版 - 恩山无线论坛 - Powered by Discuz! (right.com.cn)
+【新提醒】【终极教程】N1做旁路由，IPv6设置教程，超详细 - 斐讯无线路由器以及其它斐迅网络设备 - 恩山无线论坛 - Powered by Discuz! (right.com.cn)
 
+宿主机创建macnet1docker network create -d macvlan --subnet=192.168.1.0/24 --gateway=192.168.1.1 --subnet=fe80::/16 --gateway=fe80::1 -o parent=eth0 macnet
 
-
-使用批处理模式，即编译时加上 -interaction=batchmode 参数
-
-使用预编译技 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/KMP/" title="KMP">KMP</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.207Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">KMP123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051package com.zq.JVM;public class test2 &#123;    public static void main(String[] args) &#123;        Solution solution = new Solution();        System.out.println(solution.strStr(&quot;aabaabaaf&quot;, &quot;aabaaf&quot;));    &#125;&#125;class Solution &#123;    //前缀表（不减一）Java实现    public int strStr(String haystack, String needle) &#123;        if (needle.length() == 0) &#123;            return 0;    ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/JVM/" title="JVM">JVM</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.206Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">JVM类加载过程
-加载:
-将编译成的字节码文件加载到JVM内存中, 并生成一个代表该类的 java.lang.Class 对象
-
-验证: 
-检查字节码是否规范, 
-确保二进制字节流格式符合预期（比如说是否以 cafe bene 咖啡北鼻开头）。
-是否所有方法都遵守访问控制关键字的限定。
-方法调用的参数个数和类型是否正确。
-确保变量在使用之前被正确初始化了。
-检查变量是否被赋予恰当类型的值
-
-准备:
-对类变量（也称为静态变量，static 关键字修饰的）分配内存并初始化（对应数据类型的默认初始值，如 0、0L、null、false 等）
-如public static int value1 = 123;在此阶段初始值为0
-但public static final int value2 = 123;在此阶段初始值为123
-
-解析:
-将常量池中的符号引用转化为直接引用
-直接引用通过对符号引用进行解析，找到引用的实际内存地址
-
-初始化:
-为变量赋予代码中的值
-
-
-java中的native
-作用: 扩展java的功能, 使java可以调用其他语言的代码完成任务. 比如用户上传一个视频文件，需要后台 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/jsRegex/" title="jsRegex">jsRegex</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.204Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">
-string.match(&#x2F;\d+&#x2F;gis)
-
-return an array of string that matched the regex.
-\d:match number
-\w:数字 字母 下划线
-+:match one or more
-*:匹配0次或多次
-g:global match
-i:ignore capital
-s:忽略换行符
-
-
-string.match(&#x2F;[^\da-zA-Z]+&#x2F;g)
-
-^:don’t match 
-[]:当中的元素为或的关系  当中的元素不会被正则转义（如小括号放在里面就表示小括号）
-
-
-string.match(&#x2F;.+&#x2F;g)
-
-.:除了换行符以外的任何字符
-
-
-**-**是特殊字符，表示他本身时需要转义-
-
-string.match(&#x2F;\p{sc&#x3D;Han}+&#x2F;gu)
-
-专门匹配中文  u不可缺少
-
-
-string.match(&#x2F;[\s\S]&#x2F;g)   或  string.match(&#x2F;[\d\D]&#x2F;g) 
-
-匹配所 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/jetson%20nano%E9%85%8D%E7%BD%AE/" title="jetson nano配置">jetson nano配置</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.203Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">jupyter-notebook
-开机启动时显示:jupyter notebook服务启动失败，没找到原因，只能开机后让它自动执行命令来开启
-
-启动命令1/home/jetson/.local/bin/jupyter notebook /home/jetson/jupyter_notebook_config.py –allow-root
-
-jupyter 最好带上命令路径,否则可能提示找不到命令(虽然路径已经在PATH里,但遇到过找不到命令的情况),jupyter_notebook_config.py 是配置文件,内有端口号 ip等信息. 如果不加配置文件,默认只监听localhost,而且局域网无法访问
-
-设置自启动命令
-在合适位置(&#x2F;home&#x2F;jetson)新建文件new_service.py
-
-1234#!/bin/bash#command content/home/jetson/.local/bin/jupyter notebook /home/jetson/jupyter_notebook_config.py –allow-rootexit 0
-
-设置自启 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/java%E9%9B%86%E5%90%88/" title="java集合">java集合</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.201Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">java集合一些遍历方法迭代器遍历列表12345List&lt;String&gt; list=new ArrayList&lt;String&gt;();Iterator&lt;String&gt; it = list.iterator();while(it.hasNext())&#123;    System.out.println(it.next());&#125;
-
-遍历map123456789101112131415161718192021222324252627Map&lt;String, String&gt; map = new HashMap&lt;String, String&gt;();//第一种：普遍使用，二次取值()System.out.println(&quot;通过Map.keySet遍历key和value：&quot;);for (String key : map.keySet()) &#123;    System.out.println(&quot;key= &quot;+ key + &quot; and value= &quot; + map.ge ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/java%E5%9F%BA%E7%A1%80%E7%AC%94%E8%AE%B0_2023.11/" title="java基础笔记_2023.11">java基础笔记_2023.11</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.191Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">java基础笔记_2023.11Integer
-Integer对-128~high(high值可在JVM参数里配置)的值有缓存, 通过自动装箱机制创建的Integer会直接由缓存数组返回, 所以缓存范围内的相同值的对象都是同一个, 当然你自己new出来的就不一样了
-
-字符串转Integer方法
-123Integer i = new Integer(&quot;666&quot;);  // 已弃用, 使用valueof的时间和空间性能更好Integer i = Integer.valueOf(&quot;5555&quot;);Integer i =  Integer.parseInt(&quot;12&quot;); 
-
-</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zaqai</div><div class="author-info__description">分享技术</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://haiyong.site/moyu/"><i class="iconfont icon-youxishoubing"></i><span>摸鱼</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><b><font color="#e66b6d">双</font> <font color="#e66d98">手</font> <font color="#e66cc6">合</font> <font color="#cc6de6">十</font> <font color="#9770e6">成</font> <font color="#6d93e6">为</font> <font color="#6fcde6">自</font> <font color="#72e6b6">己</font> <font color="#72e689">的</font> <font color="#99e670">神</font>, <font color="#cde670">自</font> <font color="#e6df72">己</font> <font color="#e6c073">所</font> <font color="#e6a271">信</font> <font color="#e6796f">念</font> <font color="#e65454">的</font> <font color="#e63333">即</font> <font color="#e62c2c">是</font> <font color="#e60101">信</font> <font color="#e60101">仰</font></b> <p align="center"><img src="https://haiyong.site/img/img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：zq2551856565</p> <p align="center">QQ号：2551856565</p></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E9%80%9A%E8%BF%87RSSHub%E8%AE%A2%E9%98%85%E5%AD%A6%E9%99%A2%E9%80%9A%E7%9F%A5/" title="通过RSSHub订阅学院通知">通过RSSHub订阅学院通知</a><time datetime="2023-12-31T20:18:03.330Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3/" title="跨域解决">跨域解决</a><time datetime="2023-12-31T20:18:03.323Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E8%AE%B0%E4%B8%80%E4%B8%AAipv6+ddns/" title="记一个ipv6+ddns">记一个ipv6+ddns</a><time datetime="2023-12-31T20:18:03.322Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97/" title="编程心得">编程心得</a><time datetime="2023-12-31T20:18:03.320Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E7%89%9B%E5%AE%A2%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" title="牛客刷题笔记">牛客刷题笔记</a><time datetime="2023-12-31T20:18:03.319Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">55</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">55</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-12-31T12:53:31.100Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By zaqai</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+修改网络接口配置修改/etc/network/interfaces(debian ubuntu)修改/etc/sysconfig/network-scripts/ifc ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/mybatis/" title="mybatis">mybatis</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.221Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">项目概览
+pom.xml123456789101112131415161718192021222324252627282930313233343536&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;         xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;         xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd&quot;&gt;    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;    &lt;groupId&gt;org.example&lt;/groupId&gt;    &lt;a ...</div></div></div><nav id="pagination"><div class="pagination"><a class="extend prev" rel="prev" href="/page/3/#content-inner"><i class="fas fa-chevron-left fa-fw"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/3/#content-inner">3</a><span class="page-number current">4</span><a class="page-number" href="/page/5/#content-inner">5</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#content-inner">7</a><a class="extend next" rel="next" href="/page/5/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zaqai</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">66</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://blog.zaqai.com"><i class="iconfont icon-youxishoubing"></i><span>主页</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><p align="center"><img src="https://haiyong.site/img/img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：zq2551856565</p> <p align="center">QQ号：2551856565</p></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/28/nps%E6%B3%9B%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="nps泛域名解析内网穿透">nps泛域名解析内网穿透</a><time datetime="2024-03-28T10:18:03.219Z" title="Created 2024-03-28 10:18:03">2024-03-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/10/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%89%A9%E4%BD%93%E8%AE%A1%E6%95%B0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%20Point,%20Segment%20and%20Count_%20A%20Generalized%20Framework%20for%20Object%20Counting/" title="多模态物体计数论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting">多模态物体计数论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting</a><time datetime="2024-03-10T20:18:03.287Z" title="Created 2024-03-10 20:18:03">2024-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式">设计模式</a><time datetime="2024-03-10T20:18:03.287Z" title="Created 2024-03-10 20:18:03">2024-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/31/linux%E6%97%A0%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E4%BD%BF%E7%94%A8selenium%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E7%88%AC%E5%8F%96%E6%95%B0%E6%8D%AE/" title="linux无图形界面使用selenium自动登录爬取数据">linux无图形界面使用selenium自动登录爬取数据</a><time datetime="2024-01-31T20:18:03.219Z" title="Created 2024-01-31 20:18:03">2024-01-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/30/linux%E5%B0%8F%E6%8A%80%E5%B7%A7%E5%A4%87%E5%BF%98/" title="linux小技巧备忘">linux小技巧备忘</a><time datetime="2024-01-30T23:18:03.178Z" title="Created 2024-01-30 23:18:03">2024-01-30</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">57</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">January 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">66</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-06-10T11:41:11.774Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zaqai</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div></body></html>

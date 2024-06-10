@@ -9,7 +9,7 @@
 <meta name="twitter:image" content="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://blog.zaqai.com/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=4.12.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
   root: '/',
   algolia: undefined,
-  localSearch: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found"}},
   translate: undefined,
   noticeOutdate: undefined,
   highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
@@ -51,7 +51,7 @@
   isHome: true,
   isHighlightShrink: false,
   isToc: false,
-  postUpdate: '2023-12-31 12:53:31'
+  postUpdate: '2024-06-10 11:41:11'
 }</script><script>(win=>{
       win.saveToLocal = {
         set: (key, value, ttl) => {
@@ -149,7 +149,162 @@
       }
       detectApple()
     })(window)</script><meta name="generator" content="Hexo 7.0.0"><link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E9%80%9A%E8%BF%87RSSHub%E8%AE%A2%E9%98%85%E5%AD%A6%E9%99%A2%E9%80%9A%E7%9F%A5/" title="通过RSSHub订阅学院通知">通过RSSHub订阅学院通知</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.330Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">通过RSSHub订阅学院通知
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">66</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><hr class="custom-hr"/></div></div><div class="page" id="body-wrap"><header class="full_page" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="Hexo"><span class="site-name">Hexo</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="site-info"><h1 id="site-title">Hexo</h1></div><div id="scroll-down"><i class="fas fa-angle-down scroll-down-effects"></i></div></header><main class="layout" id="content-inner"><div class="recent-posts" id="recent-posts"><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/28/nps%E6%B3%9B%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="nps泛域名解析内网穿透">nps泛域名解析内网穿透</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-28T10:18:03.219Z" title="Created 2024-03-28 10:18:03">2024-03-28</time></span></div><div class="content">nps泛域名解析内网穿透
+有一个自己的服务器可以实现很多事情, 给自己带来便利.但是首先要考虑网络问题, 毕竟自己也不可能一直都处于内网环境中.一个解决方案便是云服务器, 带有公网ip, 但是配置稍微好一点的云服务器价格水涨船高.我的解决方案是家里放置一个常年开机的linux主机, 使用配置低的云服务器做内网穿透.搭配泛域名解析, 最终的效果就是在主机上配置一个反向代理之后, 直接可以使用https+二级域名的方式在任意网络环境(能连公网)下访问网站, 对自己来说操作完全透明, 就好像家里的主机有了公网ip一样.
+
+准备域名的”*“记录解析到云服务器的公网ip上.
+云服务器nps按照网上的搭建步骤来, 直接运行二进制文件也行, docker也行docker run -d --name nps --net=host -v /root/docker/nps/conf:/conf ffdfgdfg/nps注意要修改配置文件’conf/nps.conf’12http_proxy_port=80https_proxy_port=443https_proxy_port必须为443, 因为要实现ht ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/10/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%89%A9%E4%BD%93%E8%AE%A1%E6%95%B0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%20Point,%20Segment%20and%20Count_%20A%20Generalized%20Framework%20for%20Object%20Counting/" title="多模态物体计数论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting">多模态物体计数论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-10T20:18:03.287Z" title="Created 2024-03-10 20:18:03">2024-03-10</time></span></div><div class="content">Point, Segment and Count_ A Generalized Framework for Object Counting
+
+CVPR 2024
+https://github.com/Hzzone/PseCo
+
+提出了基于检测的零样本和小样本类别无关的通用计数框架（检测=计数+定位）
+使用了SAM将所有可能的物体分割成掩码proposal，使用CLIP对proposal分类来技术
+面临效率低和小的稠密物体无法识别的问题
+首先提出了一个类别无关的物体定位器，为SAM提供准确而且最少的点提示，降低计算成本，而且避免了小对象的丢失。
+此外，提出了一种广义的对象分类器，利用CLIP图像/文本嵌入作为分类器，通过层次知识蒸馏，以获得层次掩模proposal之间的区别
+
+point decoder
+对于SAM而言，在一张图片上均匀生成点（网格形式）作为prompts，如果点所在的位置有物体，SAM就可以生成该物体的mask，但是网格形式生成点，点不能保证落到所有物体上，特别是小物体。虽然可以让点更稠密，生成更多的点，但是效率不高
+所以要训练一个网络来生成点，让点尽可能多的落到物体上 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/03/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式">设计模式</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-03-10T20:18:03.287Z" title="Created 2024-03-10 20:18:03">2024-03-10</time></span></div><div class="content">设计模式
+工厂方法模式
+
+工厂模式是一种创建型设计模式, 有两套东西
+产品
+通用产品是一个接口, 具体的产品要实现接口的功能.
+创建者
+基础的创建者是一个抽象类, 包含一个具体的方法和一个抽象的创建产品的方法, 具体的方法会调用创建产品的方法得到产品的实例, 再调用产品的功能方法
+具体的创建者继承抽象类, 重写创建产品的方法, 由于具体的产品和具体的创建者一一对应, 这个方法直接new对应的具体产品并返回.
+
+具体的产品和具体的创建者一一对应
+@Override注解是可选的
+
+客户端调用
+客户端直接用具体的创建者(子类)初始化基础创建者(父类), 并调用父类的具体方法, 具体方法会调用创建产品的方法, 创建产品的方法是由具体子类实现的, 具体的子类来new出具体的产品.
+好处
+需要新的产品, 直接定义产品类, 实现通用产品接口, 再创建一个对应的具体创建者, 继承父类, 重写抽象方法, 直接return new出来的新产品. 对于客户端的代码, 唯一的改动就是使用新的具体创建者来初始化基础创建者, 实现客户端和具体产品代码的解耦
+抽象工厂模式
+
+产品
+抽象产品是一个接口, 具体产品实现 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/31/linux%E6%97%A0%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E4%BD%BF%E7%94%A8selenium%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E7%88%AC%E5%8F%96%E6%95%B0%E6%8D%AE/" title="linux无图形界面使用selenium自动登录爬取数据">linux无图形界面使用selenium自动登录爬取数据</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-31T20:18:03.219Z" title="Created 2024-01-31 20:18:03">2024-01-31</time></span></div><div class="content">linux无图形界面使用selenium自动登录爬取数据
+对于一些cookie有效期较长的场景, 我们可以在浏览器devtool直接复制网络请求的curl命令, 再通过Convert curl commands to Python (curlconverter.com)转换为python脚本, 这样会自动带上cookie.但是对于cookie有效期较短或要求较为严格的场景, 就要使用selenium来模拟浏览器操作了, Selenium是广泛使用的模拟浏览器运行的库, 它是一个用于Web应用程序测试的工具.  Selenium测试直接运行在浏览器中，就像真正的用户在操作一样，并且支持大多数现代 Web 浏览器
+由于无图形界面不能直观地看到浏览器状态, 建议在windows上调试好爬虫脚本之后再放在linux用
+环境配置
+系统依赖12345apt-get install libxss1 libappindicator1 libindicator7#安装xvfb# xvfb是一种虚拟的窗口服务器，可以模拟图形界面。sudo apt-get install xvfb
+浏览器chrome要安装 ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/30/linux%E5%B0%8F%E6%8A%80%E5%B7%A7%E5%A4%87%E5%BF%98/" title="linux小技巧备忘">linux小技巧备忘</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-30T23:18:03.178Z" title="Created 2024-01-30 23:18:03">2024-01-30</time></span></div><div class="content">linux小技巧备忘shell脚本
+bash -x test.sh可以看到脚本执行情况, 类似边debug边执行
+
+可以使用echo $?查看上条命令返回值, 0表示成功, 非0失败
+
+if 语句
+12345678if [$COUNT -eq 3]; then	echo hhhfi---# 可以是其他command, 执行成功, 判断为真, 否则为假if ping -c 1 baidu.com; then	echo hhhfi
+
+for
+12345678for ((i=0;i&lt;3;i++)); do	echo hhhdone---IP_LIST=&quot;127.0.0.1 172.17.0.1 1.1.1.1&quot;for IP in $IP_LIST; do    echo hhhdone
+
+
+linux三剑客awk1234# 正则匹配以`/dev`开头的行, 并打印第1 5列df -h | awk &#x27;/^\/dev/&#123;print $1,$5&#125;&#x27;# 选择第2行, 并打印最后一列free -m | awk &#x27;NR==2&# ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/" title="大数据实验报告">大数据实验报告</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-18T20:18:03.178Z" title="Created 2024-01-18 20:18:03">2024-01-18</time></span></div><div class="content">大数据实验报告[toc]
+2 HDFS 分布式文件系统实战任务一：HDFS 常用操作
+步骤 1 help 命令
+
+
+
+  
+
+步骤 2 ls 命令
+
+
+步骤 3 mkdir 命令
+
+
+步骤 4 put 命令
+
+
+步骤 5 cat 命令
+
+
+步骤 6 text 命令
+
+
+步骤 7 moveFromLocal 命令
+
+
+步骤 8 appendToFile 命令
+
+
+步骤 9 cp 命令
+
+
+步骤 10 mv 命令
+
+
+步骤 11 get 命令
+
+
+步骤 12 getmerge 命令
+
+
+步骤 13 rm 命令
+
+
+步骤 14 df 命令  步骤 15 du 命令  步骤 16 count 命令
+
+
+
+任务二：回收站使用
+4 Hbase 列式数据库实战任务一：HBase 常用操作
+创建普通表
+
+
+增加数据  Scan 方式查询数据   Get 方式查询数据  指定条件查询数据
+
+
+查询多版本数据
+
+
+删除数据
+
+
+删除表
+
+
+
+任务二：创建预分 region 表
+以 rowkey 切分，随机分为 4 个 region
+
+
+
+  
+
+指定 region 的 startKey 和 endKey
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/15/%E6%97%A0root%E9%85%8D%E7%BD%AE%E7%A7%91%E7%A0%94%E7%8E%AF%E5%A2%83/" title="无root配置科研环境">无root配置科研环境</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-15T20:18:03.287Z" title="Created 2024-01-15 20:18:03">2024-01-15</time></span></div><div class="content">无root配置科研环境安装ohmyzsh首先检查有没有zsh，并没有，先安装zsh
+安装zsh1234567891011wget -O zsh.tar.xz https://sourceforge.net/projects/zsh/files/latest/download --no-check-certificatemkdir zsh &amp;&amp; unxz zsh.tar.xz &amp;&amp; tar -xvf zsh.tar -C zsh --strip-components 1# 可以尝试直接编译安装,但大概率报错cd zsh# 编译zsh./configure --prefix=$HOME/app/zshmake &amp;&amp; make install# 安装完成后。加入环境变量.bashrcexport PATH=$HOME/app/zsh/bin:$PATH# 生效source ~/.bashrc
+执行./configure的时候应该就会报错, 报错的话就先编译安装ncurses吧
+123456wget http://ftp.gnu.org/pub/ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2024/01/10/zero-shot%20object%20counting%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB1/" title="zero-shot object counting论文阅读1">zero-shot object counting论文阅读1</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2024-01-10T20:18:03.287Z" title="Created 2024-01-10 20:18:03">2024-01-10</time></span></div><div class="content">VLCounter: Text-aware Visual Representation for Zero-Shot Object Counting
+
+AAAI2024
+https://github.com/seunggu0305/VLCounter
+- zero-shot
+- 视觉语言模型
+- 在FSC-147上比clip-count的MAE低了零点几
+
+1. Visual-Language Base
+
+
+T: 语义嵌入向量  V: 块嵌入向量  S: 相似度图
+S表示图像块和文本的相似度程度，可以帮助解码器定位目标。
+        
+2. Visual-Language Counter
+2.1 语义条件下的提示微调 (SPT)
+
+        
+目的是突出显示相应区域的目标
+2.2 可学习的仿射变换 (LAT)
+由于物体计数的目标是找到物体的中心点而不是整个物体区域，相似图S中包含的信息与训练期间需要回传的损失之间可能会存在差异。
+通过将S变换为, 围绕单独的物体建立更加任务相关的视觉语义关联
+
+ 是可学习的矩阵，使用排名感知对比损失直接优化计数图，以学习对象计数的正确激活度。
+ ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E9%80%9A%E8%BF%87RSSHub%E8%AE%A2%E9%98%85%E5%AD%A6%E9%99%A2%E9%80%9A%E7%9F%A5/" title="通过RSSHub订阅学院通知">通过RSSHub订阅学院通知</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.330Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">通过RSSHub订阅学院通知
 今天看到以为up主在介绍RSSHub, 遂入坑, 上午在了解RSS, 并搭建了RSSHub, 下午费了九牛二虎之力终于给学院写了个RSS订阅(只怪自己js学的不够通透)
 【干货分享】三分钟教你部署RSSHub!_哔哩哔哩_bilibili
 
@@ -167,95 +322,5 @@ RSSHub介绍
 
 跨域请求分类
 简单跨域请求
-请求方法是GET、HEAD或者POST，并且当请求方法是POST时，Content-Type必须是application&#x2F;x-www-form-urlencoded, multipart&#x2F;form-data或着text&#x2F;plain中的一个值。
-请求中没有自定义HTTP头部(只有Accept、Content-Type、Accept-Langu ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E8%AE%B0%E4%B8%80%E4%B8%AAipv6+ddns/" title="记一个ipv6+ddns">记一个ipv6+ddns</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.322Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">记一个ipv6+ddns所谓ddns, 就是动态dns, 适用于服务器ip地址不固定, 过一段时间就会改变的场景
-推荐使用dynv6, 我用着挺好的, 地址: Free dynamic DNS for IPv6 (dynv6.com)
-虽然是英文, 但大致能看明白吧
-dynv6步骤
-首先新建域名, 在dynv6中查看token
-
-推荐使用他提供的脚本gist.github.com, 其他方式可自行参考他提供的APIdynv6 APIs
-12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849#!/bin/sh -ehostname=$1device=$2file=$HOME/.dynv6.addr6[ -e $file ] &amp;&amp; old=`cat $file`if [ -z &quot;$hostname&quot; -o -z &quot;$token&quot; ]; then  echo &quot;Usage: token=&lt;your- ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97/" title="编程心得">编程心得</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.320Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">正则匹配关键字符12String s = &quot;/data/cache/style_1_common.css?y7a&quot;;System.out.println(s.split(&quot;\\?&quot;)[0]);
-
-split(&quot;?&quot;) split(&quot;\?&quot;) split(&quot;/?&quot;)都不行split(&quot;\\?&quot;) split(&quot;[?]&quot;)行
-
-C++关于NULL和nullptr
-NULL在C语言被定义为#define NULL ((void *)0),可以发生隐式类型转换( int  *pi = NULL;)nullptr是在C++中引入的,代表空指针,因为C++是强类型语言,void*是不能隐式转换成其他类型的指针的,所以NULL会被解释为0
-
-12345678910111213141516#include &lt;iostream&gt;using namespace std; void func(int x) &#123;    cout&lt;&lt;&quo ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E7%89%9B%E5%AE%A2%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" title="牛客刷题笔记">牛客刷题笔记</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.319Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">牛客刷题笔记
-抽象类 特点: 
-1.抽象类中可以有构造方法 
-2.抽象类中可以存在普通属性，方法，静态属性和方法。 
-3.抽象类中可以存在抽象方法。
-4.如果一个类中有一个抽象方法，那么当前类一定是抽象类；抽象类中不一定有抽象方法
-5.抽象类中的抽象方法，需要有子类实现，如果子类不实现，则子类也需要定义为抽象的。
-
-
-接口 
-1.在接口中只有方法的声明，没有方法体。 
-2.在接口中只有常量，因为定义的变量，在编译的时候都会默认加上 &#x3D;&#x3D;public static final&#x3D;&#x3D;  
-3.在接口中的方法，永远都被public来修饰。
-4.接口中没有构造方法，也不能实例化接口的对象。 
-5.接口可以实现多继承 
-6.接口中定义的方法都需要有实现类来实现，如果实现类不能实现接口中的所有方法 
-7.则实现类定义为抽象类。
-线程私有:java虚拟机栈，程序计数器，本地方法栈 
-线程共享:java堆，方法区
-
-
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E6%96%90%E8%AE%AFn1%E5%AE%89%E8%A3%85centos7+docker%20openwrt/" title="斐讯n1安装centos7+docker openwrt">斐讯n1安装centos7+docker openwrt</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.311Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">斐讯n1安装centos7+docker openwrt
-首先声明,我的n1是降级过的,系统默认usb启动优先级大于emmc,所以可以直接将镜像写入u盘,通过u盘启动系统,同时通过脚本将系统写入emmc.
-同时,由于n1的usb是2.0,推荐将常用系统写入emmc,而不是通过u盘启动(虽然emmc只有8G).亲测速度快的不是一点半点,最直观的感受就是执行yum update.
-
-centos镜像N1盒子 CentOS7.9系统镜像，支持写入EMMC - 斐讯无线路由器以及其它斐迅网络设备 - 恩山无线论坛 - Powered by Discuz! (right.com.cn)
-同时附上论坛上的简单教程:
-分享N1盒子CentOS7.9系统下安装最新版本的宝塔面板linux7.7简单教程 - 斐讯无线路由器以及其它斐迅网络设备 - 恩山无线论坛 - Powered by Discuz! (right.com.cn)
-特别感谢恩山论坛的各位大佬!
-
-在此我也简单记录一下,以防某天重装系统:joy:
-
-修改写入emmc的脚本,添加上复制lib64文件夹的命令
-123456vi /root/. ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E5%AE%B6%E7%94%A8%E7%94%B5%E5%99%A8%E5%8A%9F%E7%8E%87%E7%BB%9F%E8%AE%A1/" title="家用电器功率统计">家用电器功率统计</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.304Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">家用电器功率统计冰箱
-夜晚测量, 未打开过冰箱
-
-
-
-工作(85+80+78)&#x2F;3&#x3D;81min, 停止(67+69+71)&#x2F;3&#x3D;69min, 工作时间占比8&#x2F;15
-工作时平均功率50w
-一月大概消耗19度电
-冰柜
-白天测量, 大概打开冰柜一次
-
-
-
-工作(14+14+25+17)&#x2F;4&#x3D;17.5min, 停止(24+23+18+21)&#x2F;4&#x3D;21.5min, 工作时间占比0.45
-工作时平均功率80w
-一月大概消耗26度电
-米家摄像头
-2w!
-电风扇
-不摇头
-
-
-2档功率48w, 1档功率46w, 差别不大啊
-路由器
-中间看了一段视频
-
-
-
-权当6.5w吧
-光猫
-
-2w吧
-外面摄像头
-大概是夜晚开启夜视功能, 功率变高了, 算作4w吧
-</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E5%A5%BD%E7%94%A8%E7%9A%84docker%E9%95%9C%E5%83%8F/" title="好用的docker镜像">好用的docker镜像</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.302Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">好用的docker镜像portainer12docker pull portainer/portainerdocker run -d --name portainer -p 39000:9000 -v /var/run/docker.sock:/var/run/docker.sock -v /root/data/docker_data/portainer/data:/data -v /root/data/docker_data/portainer/public:/public portainer/portainer
-
-汉化123cd /root/data/docker_data/portainerwget https://alist.zaqai.com/d/ali/share/portainer汉化/public.zipunzip ./public.zip
-
-
-
-alist1docker run -d --restart=always -v /etc/alist:/opt/alist/data -v /xa:/xa -p 39244:5244 --name=&quot;alist&qu ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E5%8D%81%E7%A7%8D%E6%96%B9%E5%BC%8F%E5%AE%9E%E7%8E%B0WordCount(scala)/" title="十种方式实现WordCount(scala)">十种方式实现WordCount(scala)</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.301Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">十种方式实现WordCount(scala)
-本质上都是各种RDD算子的灵活使用
-
-123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162163164165166167package com.zq.scala.testimport org.apache.spark.util.&#123;Accum ...</div></div></div><div class="recent-post-item"><div class="recent-post-info no-cover"><a class="article-title" href="/2023/12/31/%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0-%E9%93%BE%E8%A1%A8/" title="刷题笔记-链表">刷题笔记-链表</a><div class="article-meta-wrap"><span class="post-meta-date"><i class="far fa-calendar-alt"></i><span class="article-meta-label">Created</span><time datetime="2023-12-31T20:18:03.300Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></span></div><div class="content">刷题笔记-链表完整链表操作模板123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151#include &lt;algorithm&gt;#include &lt;iostream&gt;#include &lt;vector&gt;using namespace std;class MyLinkedList &#123;   public:    struct  ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/6/#content-inner">6</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zaqai</div><div class="author-info__description">分享技术</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://haiyong.site/moyu/"><i class="iconfont icon-youxishoubing"></i><span>摸鱼</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><b><font color="#e66b6d">双</font> <font color="#e66d98">手</font> <font color="#e66cc6">合</font> <font color="#cc6de6">十</font> <font color="#9770e6">成</font> <font color="#6d93e6">为</font> <font color="#6fcde6">自</font> <font color="#72e6b6">己</font> <font color="#72e689">的</font> <font color="#99e670">神</font>, <font color="#cde670">自</font> <font color="#e6df72">己</font> <font color="#e6c073">所</font> <font color="#e6a271">信</font> <font color="#e6796f">念</font> <font color="#e65454">的</font> <font color="#e63333">即</font> <font color="#e62c2c">是</font> <font color="#e60101">信</font> <font color="#e60101">仰</font></b> <p align="center"><img src="https://haiyong.site/img/img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：zq2551856565</p> <p align="center">QQ号：2551856565</p></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E9%80%9A%E8%BF%87RSSHub%E8%AE%A2%E9%98%85%E5%AD%A6%E9%99%A2%E9%80%9A%E7%9F%A5/" title="通过RSSHub订阅学院通知">通过RSSHub订阅学院通知</a><time datetime="2023-12-31T20:18:03.330Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3/" title="跨域解决">跨域解决</a><time datetime="2023-12-31T20:18:03.323Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E8%AE%B0%E4%B8%80%E4%B8%AAipv6+ddns/" title="记一个ipv6+ddns">记一个ipv6+ddns</a><time datetime="2023-12-31T20:18:03.322Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97/" title="编程心得">编程心得</a><time datetime="2023-12-31T20:18:03.320Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/12/31/%E7%89%9B%E5%AE%A2%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B0/" title="牛客刷题笔记">牛客刷题笔记</a><time datetime="2023-12-31T20:18:03.319Z" title="Created 2023-12-31 20:18:03">2023-12-31</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">55</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">55</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2023-12-31T12:53:31.100Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By zaqai</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
+请求方法是GET、HEAD或者POST，并且当请求方法是POST时，Content-Type必须是application/x-www-form-urlencoded, multipart/form-data或着text/plain中的一个值。
+请求中没有自定义HTTP头部(只有Accept、Content-Type、Accept-Language、Content-Lan ...</div></div></div><nav id="pagination"><div class="pagination"><span class="page-number current">1</span><a class="page-number" href="/page/2/#content-inner">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/#content-inner">7</a><a class="extend next" rel="next" href="/page/2/#content-inner"><i class="fas fa-chevron-right fa-fw"></i></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.loli.net/2021/02/24/5O1day2nriDzjSu.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">zaqai</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">66</div></a><a href="/tags/"><div class="headline">Tags</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">Categories</div><div class="length-num">0</div></a></div><a id="card-info-btn" href="https://blog.zaqai.com"><i class="iconfont icon-youxishoubing"></i><span>主页</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>Announcement</span></div><div class="announcement_content"><p align="center"><img src="https://haiyong.site/img/img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：zq2551856565</p> <p align="center">QQ号：2551856565</p></div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>Recent Post</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/28/nps%E6%B3%9B%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" title="nps泛域名解析内网穿透">nps泛域名解析内网穿透</a><time datetime="2024-03-28T10:18:03.219Z" title="Created 2024-03-28 10:18:03">2024-03-28</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/10/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%89%A9%E4%BD%93%E8%AE%A1%E6%95%B0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%20Point,%20Segment%20and%20Count_%20A%20Generalized%20Framework%20for%20Object%20Counting/" title="多模态物体计数论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting">多模态物体计数论文阅读 Point, Segment and Count_ A Generalized Framework for Object Counting</a><time datetime="2024-03-10T20:18:03.287Z" title="Created 2024-03-10 20:18:03">2024-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" title="设计模式">设计模式</a><time datetime="2024-03-10T20:18:03.287Z" title="Created 2024-03-10 20:18:03">2024-03-10</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/31/linux%E6%97%A0%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E4%BD%BF%E7%94%A8selenium%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E7%88%AC%E5%8F%96%E6%95%B0%E6%8D%AE/" title="linux无图形界面使用selenium自动登录爬取数据">linux无图形界面使用selenium自动登录爬取数据</a><time datetime="2024-01-31T20:18:03.219Z" title="Created 2024-01-31 20:18:03">2024-01-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/01/30/linux%E5%B0%8F%E6%8A%80%E5%B7%A7%E5%A4%87%E5%BF%98/" title="linux小技巧备忘">linux小技巧备忘</a><time datetime="2024-01-30T23:18:03.178Z" title="Created 2024-01-30 23:18:03">2024-01-30</time></div></div></div></div><div class="card-widget card-archives"><div class="item-headline"><i class="fas fa-archive"></i><span>Archives</span></div><ul class="card-archive-list"><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/03/"><span class="card-archive-list-date">March 2024</span><span class="card-archive-list-count">3</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2024/01/"><span class="card-archive-list-date">January 2024</span><span class="card-archive-list-count">5</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/12/"><span class="card-archive-list-date">December 2023</span><span class="card-archive-list-count">57</span></a></li><li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">January 2023</span><span class="card-archive-list-count">1</span></a></li></ul></div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>Info</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">Article :</div><div class="item-count">66</div></div><div class="webinfo-item"><div class="item-name">UV :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">PV :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">Last Update :</div><div class="item-count" id="last-push-date" data-lastPushDate="2024-06-10T11:41:11.774Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2024 By zaqai</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="Toggle Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between Single-column and Double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="Back To Top"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=4.12.0"></script><script src="/js/main.js?v=4.12.0"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0.32/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">Search</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  Loading the Database</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=4.12.0"></script></div></div></body></html>

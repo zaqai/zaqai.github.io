@@ -2,6 +2,132 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://blog.zaqai.com/2024/01/15/%E6%97%A0root%E9%85%8D%E7%BD%AE%E7%A7%91%E7%A0%94%E7%8E%AF%E5%A2%83/</loc>
+    
+    <lastmod>2024-04-17</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2024/03/28/nps%E6%B3%9B%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</loc>
+    
+    <lastmod>2024-03-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2024/01/31/linux%E6%97%A0%E5%9B%BE%E5%BD%A2%E7%95%8C%E9%9D%A2%E4%BD%BF%E7%94%A8selenium%E8%87%AA%E5%8A%A8%E7%99%BB%E5%BD%95%E7%88%AC%E5%8F%96%E6%95%B0%E6%8D%AE/</loc>
+    
+    <lastmod>2024-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2024/03/10/%E5%A4%9A%E6%A8%A1%E6%80%81%E7%89%A9%E4%BD%93%E8%AE%A1%E6%95%B0%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%20Point,%20Segment%20and%20Count_%20A%20Generalized%20Framework%20for%20Object%20Counting/</loc>
+    
+    <lastmod>2024-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2024/03/10/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</loc>
+    
+    <lastmod>2024-03-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2023/12/31/%E9%AB%98%E6%A0%A1%E6%98%87%E8%85%BEAI%E5%85%A5%E9%97%A8%E8%AF%BE%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</loc>
+    
+    <lastmod>2024-03-23</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2023/12/31/%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3/</loc>
+    
+    <lastmod>2024-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2023/12/31/zhou29%E7%AC%94%E8%AE%B0_nginx/</loc>
+    
+    <lastmod>2024-03-07</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2024/01/30/linux%E5%B0%8F%E6%8A%80%E5%B7%A7%E5%A4%87%E5%BF%98/</loc>
+    
+    <lastmod>2024-01-31</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2023/01/23/%E8%AE%B0%E4%B8%80%E6%AC%A1Spring%20Boot%E4%BE%9D%E8%B5%96%E7%9A%84%E5%9D%91/</loc>
+    
+    <lastmod>2024-01-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2023/12/31/clip_based%20OD%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB%20DetCLIP%20Dictionary-Enriched%20Visual-Concept%20Paralleled%20Pre-training%20for%20Open-world%20Detection/</loc>
+    
+    <lastmod>2024-01-22</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2023/12/31/git/</loc>
+    
+    <lastmod>2024-01-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2024/01/18/%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/</loc>
+    
+    <lastmod>2024-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://blog.zaqai.com/2024/01/10/zero-shot%20object%20counting%E8%AE%BA%E6%96%87%E9%98%85%E8%AF%BB1/</loc>
+    
+    <lastmod>2024-01-11</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://blog.zaqai.com/2023/12/31/Java%20List%E6%8E%92%E5%BA%8F/</loc>
     
     <lastmod>2023-12-31</lastmod>
@@ -56,15 +182,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zaqai.com/2023/12/31/%E8%B7%A8%E5%9F%9F%E8%A7%A3%E5%86%B3/</loc>
-    
-    <lastmod>2023-12-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zaqai.com/2023/12/31/%E5%AE%B6%E7%94%A8%E7%94%B5%E5%99%A8%E5%8A%9F%E7%8E%87%E7%BB%9F%E8%AE%A1/</loc>
     
     <lastmod>2023-12-31</lastmod>
@@ -111,15 +228,6 @@
   
   <url>
     <loc>https://blog.zaqai.com/2023/12/31/%E7%BC%96%E7%A8%8B%E5%BF%83%E5%BE%97/</loc>
-    
-    <lastmod>2023-12-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.zaqai.com/2023/12/31/zhou29%E7%AC%94%E8%AE%B0_nginx/</loc>
     
     <lastmod>2023-12-31</lastmod>
     
@@ -398,15 +506,6 @@
   </url>
   
   <url>
-    <loc>https://blog.zaqai.com/2023/12/31/git/</loc>
-    
-    <lastmod>2023-12-31</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://blog.zaqai.com/2023/12/31/docker%E6%89%93%E5%8C%85%E5%AE%B9%E5%99%A8%20%E8%BD%BD%E5%85%A5%E5%AE%B9%E5%99%A8/</loc>
     
     <lastmod>2023-12-31</lastmod>
@@ -499,7 +598,7 @@
 
   <url>
     <loc>https://blog.zaqai.com/</loc>
-    <lastmod>2023-12-31</lastmod>
+    <lastmod>2024-06-10</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
